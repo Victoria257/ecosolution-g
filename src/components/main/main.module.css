@@ -1,0 +1,230 @@
+.container {
+  padding-top: 171px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    padding-top: 189px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 225px;
+  }
+}
+.mainWrapper {
+  display: block;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.titleWrapper {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 50%;
+    padding-right: 65px;
+    box-sizing: border-box;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 50%;
+  }
+}
+.title {
+  color: rgba(23, 61, 51, 1);
+  font-family: Oswald;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+.rightWrapper {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    padding-left: 100px;
+    padding-right: 77px;
+    box-sizing: border-box;
+  }
+}
+.description {
+  margin-top: 24px;
+
+  color: rgba(23, 61, 51, 1);
+  font-family: Fira Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.64px;
+  text-align: justify;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin: 0;
+  }
+}
+.moreContainer {
+  text-align: center;
+  margin-top: 24px;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-top: 43px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 20px;
+  }
+}
+.more {
+  border-radius: 500px;
+  border: 1px solid #97d28b;
+  padding: 3.5px 3.5px 3.5px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.moreText {
+  color: rgba(23, 61, 51, 1);
+  font-family: Fira Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.64px;
+}
+.arrow {
+  margin-left: 12px;
+}
+.contactsWrapper::before {
+  content: '';
+  display: block;
+
+  width: 100%;
+  height: 1px;
+  background-color: rgba(151, 210, 139, 1);
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .contactsWrapper::before {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contactsWrapper::before {
+    margin-bottom: 12px;
+  }
+}
+
+.contactsWrapper {
+  margin-top: 24px;
+  text-align: center;
+}
+.contacts {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  }
+}
+.contactsLeftWrapper {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 50%;
+    text-align: start;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 50%;
+    text-align: start;
+  }
+}
+.contactsRightWrapper {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-left: 100px;
+  }
+}
+
+.contacts a {
+  color: rgba(23, 61, 51, 1);
+  font-family: Fira Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.64px;
+}
+
+.email {
+  margin-top: 8px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 0;
+  }
+}
+.ecosolution {
+  display: none;
+
+  color: rgba(23, 61, 51, 1);
+  font-family: Fira Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.64px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
+}

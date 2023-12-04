@@ -1,0 +1,210 @@
+.container {
+  padding-top: 36px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    padding-top: 100px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 120px;
+  }
+}
+
+.titleWrapper {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -100px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -125px;
+  }
+}
+
+.title {
+  color: rgba(23, 61, 51, 1);
+  font-family: Oswald;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: calc((100% - 24px) / 2);
+    height: 100%;
+    padding-right: 70px;
+    box-sizing: border-box;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: calc((100% - 24px) / 2);
+    height: 100%;
+    padding-right: 70px;
+    box-sizing: border-box;
+
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+.listWrapper {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  }
+}
+.list {
+  margin-top: 16px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: calc((100% - 24px) / 2);
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 24px;
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+.set::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(151, 210, 139, 1);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.questionWrapper {
+  display: flex;
+}
+.buttonIcon {
+  margin-right: 8px;
+  margin-top: 25px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  height: 16px;
+}
+.question {
+  color: rgba(23, 61, 51, 1);
+  font-family: Fira Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.72px;
+  text-align: justify;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+  }
+}
+.answer {
+  color: rgba(23, 61, 51, 1);
+  font-family: Fira Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.56px;
+  text-align: justify;
+
+  margin-top: 16px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    letter-spacing: -0.64px;
+
+    margin-top: 24px;
+  }
+}
+.findQuestionAndButtonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    align-items: flex-end;
+    margin-top: -100px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    align-items: flex-end;
+    margin-top: -100px;
+  }
+}
+.findQuestionAndButton {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: calc((100% - 24px) / 2);
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: calc((100% - 24px) / 2);
+  }
+}
+.findQuestion {
+  color: rgba(23, 61, 51, 1);
+  font-family: Fira Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.72px;
+
+  margin-top: 36px;
+  margin-bottom: 0;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+  }
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  display: flex;
+  padding: 10px 16px;
+  border-radius: 500px;
+  border: none;
+  text-align: center;
+  margin-top: 12px;
+  background-color: rgba(151, 210, 139, 1);
+  cursor: pointer;
+}
+.dot {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  background-color: rgba(23, 61, 51, 1);
+  margin-left: 12px;
+}
+.addIcon {
+  width: 16px;
+  height: 16px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 28px;
+    height: 28px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 28px;
+    height: 28px;
+  }
+}

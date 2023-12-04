@@ -1,0 +1,101 @@
+.container {
+  position: fixed;
+  min-width: 360px;
+  max-width: 480px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(234, 237, 241, 1);
+  z-index: 1000;
+  padding-bottom: 36px;
+  padding-top: 36px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+.uk-scrolling-class {
+  background-color: rgb(212, 218, 226);
+  border-bottom: solid 1px rgb(204, 209, 224);
+}
+.rightWrapper {
+  display: flex;
+  gap: 12px;
+}
+.menuWrapper {
+  border-radius: 50px;
+  background-color: rgba(220, 239, 216, 1);
+  padding: 12px;
+  cursor: pointer;
+}
+.menu {
+  width: 16px;
+  height: 16px;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(23, 61, 51, 0.25);
+  backdrop-filter: blur(2px);
+
+  z-index: 4;
+}
+.buttonWrapper {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+.button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 10px 16px;
+  background-color: rgba(151, 210, 139, 1);
+  border-radius: 50px;
+  border: none;
+}
+.buttonText {
+  color: rgba(23, 61, 51, 1);
+
+  font-family: Fira Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.64px;
+}
+.dot {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50px;
+  background-color: rgba(23, 61, 51, 1);
+}

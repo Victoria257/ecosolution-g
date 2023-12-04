@@ -1,0 +1,222 @@
+.nextArrow {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  transform: translateX(-50%);
+  transform: rotate(180deg);
+  top: -93px;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    top: -125px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: -210px;
+  }
+}
+
+.prevArrow {
+  position: absolute;
+  display: inline-block;
+  right: 57px;
+  transform: translateX(-50%);
+  top: -93px;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    top: -125px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: -210px;
+  }
+}
+
+.counterSliderWrapper {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .counterSlider::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 65px;
+    background-color: rgba(151, 210, 139, 1);
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .counterSlider::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 96px;
+    background-color: rgba(151, 210, 139, 1);
+    margin-right: 161px;
+  }
+}
+
+.counterSlider {
+  margin-bottom: 19px;
+
+  color: rgba(23, 61, 51, 1);
+
+  font-family: Fira Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -1.12px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+.sliderContainer {
+  background-color: rgba(234, 237, 241, 1);
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-top: 36px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 120px;
+
+    /* outline: solid 1px blue; */
+  }
+}
+
+/* .sliderContainer > div > div > div {
+  outline: solid red 1px;
+  margin: 0 15px;
+} */
+
+.container img {
+  width: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: auto;
+  }
+
+  @media screen and (min-width: 1280px) {
+  }
+}
+.content {
+  padding: 24px 12px;
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 35px 48px;
+  }
+}
+.descriptionWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    height: 72px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 125px;
+  }
+}
+.description {
+  width: 175px;
+  color: rgba(23, 61, 51, 1);
+  font-family: Fira Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.72px;
+  text-align: justify;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    font-size: 20px;
+    letter-spacing: -0.8px;
+    width: 194px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+    width: auto;
+    margin-right: 60px;
+  }
+}
+
+.arrowWrapper {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  @media screen and (min-width: 1280px) {
+  }
+}
+
+.captionWrapper::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(151, 210, 139, 1);
+  margin-bottom: 12px;
+  margin-top: 21px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .captionWrapper::before {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .captionWrapper::before {
+    margin-top: 0;
+  }
+}
+.captionContainer {
+  display: flex;
+  justify-content: space-between;
+
+  color: rgba(23, 61, 51, 1);
+  font-family: Fira Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.48px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    font-size: 14px;
+    letter-spacing: -0.56px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    letter-spacing: -0.64px;
+  }
+}

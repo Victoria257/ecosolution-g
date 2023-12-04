@@ -1,12 +1,5 @@
 .container {
   padding-top: 36px;
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    padding-top: 100px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding-top: 120px;
-  }
 }
 
 .titleWrapper {
@@ -20,52 +13,17 @@
   font-weight: 400;
   line-height: 28px;
   text-transform: uppercase;
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    font-size: 36px;
-    line-height: 36px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    font-size: 48px;
-    line-height: 48px;
-  }
 }
-.contactsWrapperWithoutTitle {
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    display: flex;
-    margin-top: 40px;
-  }
 
-  @media screen and (min-width: 1280px) {
-    display: flex;
-    margin-top: 120px;
-  }
-}
 .list {
   display: flex;
   flex-direction: column;
   gap: 24px;
   margin: 24px 76px 24px 0;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    width: 50%;
-    padding-right: 72px;
-    box-sizing: border-box;
-    margin: 0;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 50%;
-    margin: 0;
-    gap: 32px;
-  }
 }
 
 .listPhones {
   margin-top: 8px;
-  @media screen and (min-width: 1280px) {
-    margin-top: 16px;
-  }
 }
 .listPhones li:last-child {
   margin-top: 12px;
@@ -80,11 +38,6 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.8px;
-
-  @media screen and (min-width: 1280px) {
-    font-size: 24px;
-    letter-spacing: -0.96px;
-  }
 }
 .setTitle {
   color: rgba(23, 61, 51, 1);
@@ -114,39 +67,85 @@
   cursor: pointer;
   margin-top: 8px;
   align-items: center;
-
-  @media screen and (min-width: 1280px) {
-    margin-top: 16px;
-  }
 }
 
 .socialWrapper {
   display: inline-block;
   text-align: center;
   margin-top: 24px;
-
-  @media screen and (min-width: 1280px) {
-    margin-top: 32px;
-  }
 }
 .social {
   display: flex;
   justify-content: center;
   gap: 32px;
   margin-top: 20px;
+}
 
-  @media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    padding-top: 100px;
+  }
+  .title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .contactsWrapperWithoutTitle {
+    display: flex;
+    margin-top: 40px;
+  }
+  .list {
+    width: 50%;
+    padding-right: 72px;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .listPhones {
+  }
+  .listPhones a {
+  }
+  .line {
+  }
+  .contactsFormWrapper {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    padding-top: 120px;
+  }
+  .title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .contactsWrapperWithoutTitle {
+    display: flex;
+    margin-top: 120px;
+  }
+  .list {
+    width: 50%;
+    margin: 0;
+    gap: 32px;
+  }
+  .listPhones {
+    margin-top: 16px;
+  }
+  .listPhones a {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+  }
+  .line {
+    margin-top: 16px;
+  }
+  .socialWrapper {
+    margin-top: 32px;
+  }
+  .social {
     width: 50%;
     gap: 8px;
     margin-top: 16px;
   }
-}
-.contactsFormWrapper {
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    width: 50%;
-  }
-
-  @media screen and (min-width: 1280px) {
+  .contactsFormWrapper {
     width: 50%;
   }
 }

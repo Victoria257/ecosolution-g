@@ -6,14 +6,6 @@
   transform: rotate(180deg);
   top: -93px;
   cursor: pointer;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    top: -125px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    top: -210px;
-  }
 }
 
 .prevArrow {
@@ -23,51 +15,6 @@
   transform: translateX(-50%);
   top: -93px;
   cursor: pointer;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    top: -125px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    top: -210px;
-  }
-}
-
-.counterSliderWrapper {
-  margin: 0;
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-  }
-
-  @media screen and (min-width: 1280px) {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .counterSlider::before {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 65px;
-    background-color: rgba(151, 210, 139, 1);
-    margin-right: 8px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .counterSlider::before {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 96px;
-    background-color: rgba(151, 210, 139, 1);
-    margin-right: 161px;
-  }
 }
 
 .counterSlider {
@@ -81,29 +28,9 @@
   font-weight: 300;
   line-height: normal;
   letter-spacing: -1.12px;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    width: 50%;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 50%;
-    display: flex;
-    align-items: flex-end;
-  }
 }
 .sliderContainer {
   background-color: rgba(234, 237, 241, 1);
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    margin-top: 36px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin-top: 120px;
-  }
 }
 
 /* .sliderContainer > div > div > div {
@@ -113,34 +40,13 @@
 
 .container img {
   width: 100%;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    width: auto;
-  }
-
-  @media screen and (min-width: 1280px) {
-  }
 }
 .content {
   padding: 24px 12px;
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding: 35px 48px;
-  }
 }
 .descriptionWrapper {
   display: flex;
   justify-content: space-between;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    height: 72px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    height: 125px;
-  }
 }
 .description {
   width: 175px;
@@ -152,30 +58,6 @@
   line-height: normal;
   letter-spacing: -0.72px;
   text-align: justify;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    font-size: 20px;
-    letter-spacing: -0.8px;
-    width: 194px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    font-size: 24px;
-    letter-spacing: -0.96px;
-    width: auto;
-    margin-right: 60px;
-  }
-}
-
-.arrowWrapper {
-  margin: 0;
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    display: flex;
-    align-items: flex-end;
-  }
-
-  @media screen and (min-width: 1280px) {
-  }
 }
 
 .captionWrapper::before {
@@ -187,17 +69,7 @@
   margin-bottom: 12px;
   margin-top: 21px;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .captionWrapper::before {
-    margin-top: 16px;
-  }
-}
 
-@media screen and (min-width: 1280px) {
-  .captionWrapper::before {
-    margin-top: 0;
-  }
-}
 .captionContainer {
   display: flex;
   justify-content: space-between;
@@ -209,13 +81,110 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.48px;
+}
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .nextArrow {
+    top: -125px;
+  }
+  .prevArrow {
+    top: -125px;
+  }
+  .counterSliderWrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  .counterSlider::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 65px;
+    background-color: rgba(151, 210, 139, 1);
+    margin-right: 8px;
+  }
+  .counterSlider {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .sliderContainer {
+    margin-top: 36px;
+  }
+  .container img {
+    width: auto;
+  }
+  .content {
+  }
+  .descriptionWrapper {
+    height: 72px;
+  }
+  .description {
+    font-size: 20px;
+    letter-spacing: -0.8px;
+    width: 194px;
+  }
+  .arrowWrapper {
+    display: flex;
+    align-items: flex-end;
+  }
+  .captionWrapper::before {
+    margin-top: 16px;
+  }
+  .captionContainer {
     font-size: 14px;
     letter-spacing: -0.56px;
   }
+}
 
-  @media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
+  .nextArrow {
+    top: -210px;
+  }
+  .prevArrow {
+    top: -210px;
+  }
+  .counterSliderWrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  .counterSlider::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 96px;
+    background-color: rgba(151, 210, 139, 1);
+    margin-right: 161px;
+  }
+  .counterSlider {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .sliderContainer {
+    margin-top: 120px;
+  }
+  .container img {
+  }
+  .content {
+    padding: 35px 48px;
+  }
+  .descriptionWrapper {
+    height: 125px;
+  }
+  .description {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+    width: auto;
+    margin-right: 60px;
+  }
+  .arrowWrapper {
+  }
+  .captionWrapper::before {
+    margin-top: 0;
+  }
+  .captionContainer {
     font-size: 16px;
     letter-spacing: -0.64px;
   }

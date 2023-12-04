@@ -1,13 +1,42 @@
 {
   "files": {
-    "main.css": "/ecosolution-g/static/css/main.7acaea2f.css",
-    "main.js": "/ecosolution-g/static/js/main.07d3183d.js",
+    "main.css": "/ecosolution-g/static/css/main.cb13ffeb.css",
+    "main.js": "/ecosolution-g/static/js/main.1489200e.js",
+    "static/media/wind-turbine-desktop-3.jpg": "/ecosolution-g/static/media/wind-turbine-desktop-3.cfd665b602c2b3bc1257.jpg",
+    "static/media/photo-1.png": "/ecosolution-g/static/media/photo-1.a8c12311c0eadd8212bf.png",
+    "static/media/photo-2.png": "/ecosolution-g/static/media/photo-2.508310ef098a18003b2b.png",
+    "static/media/photo-3.png": "/ecosolution-g/static/media/photo-3.2007ee58698a3272e4e2.png",
+    "static/media/wind-turbine-desktop-2.jpg": "/ecosolution-g/static/media/wind-turbine-desktop-2.41e718e96ec2119d00b6.jpg",
+    "static/media/photo-5.png": "/ecosolution-g/static/media/photo-5.df182b42e929331d4d42.png",
+    "static/media/photo-4.png": "/ecosolution-g/static/media/photo-4.6a98bee7f03c14419266.png",
+    "static/media/wind-turbine-tablet-3.jpg": "/ecosolution-g/static/media/wind-turbine-tablet-3.d298764fde183011aaa4.jpg",
+    "static/media/wind-turbine-tablet-2.jpg": "/ecosolution-g/static/media/wind-turbine-tablet-2.27968456ab3aa3b8c7e6.jpg",
+    "static/media/wind-farms-desktop-3.jpg": "/ecosolution-g/static/media/wind-farms-desktop-3.2287895b8a07904d4649.jpg",
+    "static/media/solar-panels-desktop-3.jpg": "/ecosolution-g/static/media/solar-panels-desktop-3.8e20ae83ce0efc4cbbb7.jpg",
+    "static/media/wind-turbine-desktop.jpg": "/ecosolution-g/static/media/wind-turbine-desktop.d4c6b9ed5da27901e809.jpg",
+    "static/media/wind-turbine-mobile-3.jpg": "/ecosolution-g/static/media/wind-turbine-mobile-3.f98be08554ab30142504.jpg",
+    "static/media/wind-farms-desktop-2.jpg": "/ecosolution-g/static/media/wind-farms-desktop-2.9abf599a4f9efc5429d9.jpg",
+    "static/media/solar-panels-desktop-2.jpg": "/ecosolution-g/static/media/solar-panels-desktop-2.5f38693ed7f13ac35aba.jpg",
+    "static/media/wind-farms-tablet-3.jpg": "/ecosolution-g/static/media/wind-farms-tablet-3.942c3fa6157a541f7af5.jpg",
+    "static/media/wind-turbine-mobile-2.jpg": "/ecosolution-g/static/media/wind-turbine-mobile-2.533cc5f8b2b97abe2c2e.jpg",
+    "static/media/wind-turbine-tablet.jpg": "/ecosolution-g/static/media/wind-turbine-tablet.be4f439a4ae75f83fd91.jpg",
+    "static/media/solar-panels-tablet-3.jpg": "/ecosolution-g/static/media/solar-panels-tablet-3.d52e42e1b7538960073c.jpg",
+    "static/media/wind-farms-tablet-2.jpg": "/ecosolution-g/static/media/wind-farms-tablet-2.64d87be628c6fabbf944.jpg",
+    "static/media/wind-farms-desktop.jpg": "/ecosolution-g/static/media/wind-farms-desktop.72ae7da86167cce66776.jpg",
+    "static/media/solar-panels-tablet-2.jpg": "/ecosolution-g/static/media/solar-panels-tablet-2.ed127abba19bfa05e3d0.jpg",
+    "static/media/wind-turbine-mobile.jpg": "/ecosolution-g/static/media/wind-turbine-mobile.d3836a2ef45bf4dc0c35.jpg",
+    "static/media/solar-panels-desktop.jpg": "/ecosolution-g/static/media/solar-panels-desktop.a2e44c5a5cb54b62aaf3.jpg",
+    "static/media/Logo.svg": "/ecosolution-g/static/media/Logo.1290cfb5d49e201a4ee7e1b84a35e431.svg",
+    "static/media/slick.svg": "/ecosolution-g/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/ecosolution-g/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/ecosolution-g/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/ecosolution-g/index.html",
-    "main.7acaea2f.css.map": "/ecosolution-g/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/ecosolution-g/static/js/main.07d3183d.js.map"
+    "static/media/slick.woff": "/ecosolution-g/static/media/slick.295183786cd8a1389865.woff",
+    "main.cb13ffeb.css.map": "/ecosolution-g/static/css/main.cb13ffeb.css.map",
+    "main.1489200e.js.map": "/ecosolution-g/static/js/main.1489200e.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.cb13ffeb.css",
+    "static/js/main.1489200e.js"
   ]
 }

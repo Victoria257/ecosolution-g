@@ -111,11 +111,11 @@
   .sliderContainer {
     margin-top: 36px;
   }
+
   .container img {
     width: auto;
   }
-  .content {
-  }
+
   .descriptionWrapper {
     height: 72px;
   }
@@ -165,8 +165,7 @@
   .sliderContainer {
     margin-top: 120px;
   }
-  .container img {
-  }
+
   .content {
     padding: 35px 48px;
   }
@@ -179,8 +178,7 @@
     width: auto;
     margin-right: 60px;
   }
-  .arrowWrapper {
-  }
+
   .captionWrapper::before {
     margin-top: 0;
   }

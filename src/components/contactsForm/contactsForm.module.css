@@ -11,7 +11,23 @@
   }
 }
 .set {
+  position: relative;
   margin-top: 28px;
+}
+
+.wrongMessage {
+  position: absolute;
+  right: 0;
+  bottom: -22px;
+  color: rgba(210, 139, 139, 1);
+
+  text-align: right;
+  font-family: Fira Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.48px;
 }
 .set h2 {
   color: rgba(23, 61, 51, 1);
@@ -34,6 +50,9 @@
   height: 1px;
   background-color: rgba(151, 210, 139, 1);
   margin-top: 8px;
+}
+.set.setWrong::after {
+  background-color: rgba(210, 139, 139, 1);
 }
 
 .set input,

@@ -12,7 +12,7 @@ import { Call } from 'components/svg/call';
 export const Contacts = () => {
   return (
     <Element name="contactUs">
-      <section className={css.container} id="contactUs">
+      <section className={css.container}>
         <div className={css.titleWrapper}>
           <h2 className={css.title}>Contact us</h2>
         </div>
@@ -53,7 +53,7 @@ export const Contacts = () => {
                   rel="noopener noreferrer"
                   className={css.line}
                 >
-                  <Map />
+                  <Map width={24} />
                   <p> 79005, Ukraine, Lvivstreet Shota Rustaveli, 7</p>
                 </a>
               </div>

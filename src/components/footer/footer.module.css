@@ -1,12 +1,5 @@
 .container {
   padding-top: 36px;
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    padding-top: 100px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding-top: 120px;
-  }
 }
 .footerWrapper::before {
   content: '';
@@ -16,73 +9,20 @@
   background-color: rgba(151, 210, 139, 1);
   margin-bottom: 24px;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .footerWrapper::before {
-    margin-bottom: 40px;
-  }
-}
 
-@media screen and (min-width: 1280px) {
-  .footerWrapper::before {
-    margin-bottom: 40px;
-  }
-}
 .footer {
   padding-bottom: 24px;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    padding-bottom: 40px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding-bottom: 40px;
-  }
 }
-.wrapperLogoAndSocial {
-  outline: solid 1px red;
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    display: flex;
-    position: relative;
-  }
 
-  @media screen and (min-width: 1280px) {
-    display: flex;
-    position: relative;
-  }
-}
 .logoWrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    display: block;
-    width: 50%;
-  }
-
-  @media screen and (min-width: 1280px) {
-    display: block;
-    width: 50%;
-  }
 }
 
 .arrowWrapper {
   margin-left: 12px;
   cursor: pointer;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    margin: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
 }
 
 .social {
@@ -90,71 +30,12 @@
   justify-content: center;
   gap: 8px;
   margin-top: 24px;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    width: 50%;
-    margin: 0;
-
-    justify-content: flex-start;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 50%;
-    margin: 0;
-
-    justify-content: flex-start;
-    padding-left: 100px;
-    box-sizing: border-box;
-  }
 }
 .contacts {
   display: flex;
   flex-direction: column;
   margin-top: 24px;
   text-align: center;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    flex-direction: row;
-    text-align: left;
-    margin-top: 16px;
-    align-items: center;
-  }
-
-  @media screen and (min-width: 1280px) {
-    flex-direction: row;
-    text-align: left;
-    align-items: center;
-  }
-}
-
-.contactsLeftWrapper {
-  outline: solid 1px inherit;
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    width: 50%;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .contactsRightWrapper {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .contactsRightWrapper {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 100px;
-    box-sizing: border-box;
-  }
 }
 
 .contacts p {
@@ -166,14 +47,6 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.64px;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    margin-top: 0px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin-top: 0px;
-  }
 }
 
 .contacts a {
@@ -185,16 +58,113 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.64px;
-
   text-align: center;
+}
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    padding-top: 100px;
+  }
+  .footerWrapper::before {
+    margin-bottom: 40px;
+  }
+  .footer {
+    padding-bottom: 40px;
+  }
+  .wrapperLogoAndSocial {
+    display: flex;
+    position: relative;
+  }
+  .logoWrapper {
+    display: block;
+    width: 50%;
+  }
+  .arrowWrapper {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .social {
+    width: 50%;
+    margin: 0;
+    justify-content: flex-start;
+  }
+  .contacts {
+    flex-direction: row;
+    text-align: left;
+    margin-top: 16px;
+    align-items: center;
+  }
+  .contactsLeftWrapper {
+    width: 50%;
+  }
+  .contactsRightWrapper {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contacts p {
+    margin-top: 0px;
+  }
+  .contacts a {
     margin: 0;
     text-align: left;
     padding: 0;
   }
+}
 
-  @media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
+  .container {
+    padding-top: 120px;
+  }
+  .footerWrapper::before {
+    margin-bottom: 40px;
+  }
+  .footer {
+    padding-bottom: 40px;
+  }
+  .wrapperLogoAndSocial {
+    display: flex;
+    position: relative;
+  }
+  .logoWrapper {
+    display: block;
+    width: 50%;
+  }
+  .arrowWrapper {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .social {
+    width: 50%;
+    margin: 0;
+    justify-content: flex-start;
+    padding-left: 100px;
+    box-sizing: border-box;
+  }
+  .contacts {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+  .contactsLeftWrapper {
+    width: 50%;
+  }
+  .contactsRightWrapper {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    box-sizing: border-box;
+  }
+  .contacts p {
+    margin-top: 0px;
+  }
+  .contacts a {
     margin: 0;
     text-align: left;
     padding: 0;

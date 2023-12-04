@@ -39,6 +39,7 @@
   }
 }
 .wrapperLogoAndSocial {
+  margin: 0;
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     display: flex;
     position: relative;

@@ -39,7 +39,7 @@
   }
 }
 .wrapperLogoAndSocial {
-  outline: inherit;
+  outline: solid 1px red;
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     display: flex;
     position: relative;
@@ -126,7 +126,7 @@
 }
 
 .contactsLeftWrapper {
-  outline: inherit;
+  outline: solid 1px inherit;
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     width: 50%;
   }
@@ -137,7 +137,7 @@
 }
 
 .contactsRightWrapper {
-  outline: inherit;
+  outline: solid 1px inherit;
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     width: 50%;
     display: flex;

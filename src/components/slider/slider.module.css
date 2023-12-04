@@ -37,9 +37,15 @@
   outline: solid red 1px;
   margin: 0 15px;
 } */
-
+.container {
+  border-right: solid 12px rgba(243, 245, 250, 1);
+  border-left: solid 12px rgba(243, 245, 250, 1);
+  object-fit: cover;
+  box-sizing: border-box;
+}
 .container img {
   width: 100%;
+  display: block;
 }
 .content {
   padding: 24px 12px;

@@ -151,12 +151,13 @@
   text-align: center;
 }
 .contacts {
+  border: solid 1px red;
   @media screen and (min-width: 768px) {
-    border: solid 1px red;
     display: flex;
   }
 }
 .contactsLeftWrapper {
+  border: solid 1px blue;
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     border: solid 1px blue;
     width: 50%;
@@ -169,8 +170,8 @@
   }
 }
 .contactsRightWrapper {
+  border: solid 1px green;
   @media screen and (min-width: 768px) and (max-width: 1279px) {
-    border: solid 1px green;
     width: 50%;
     display: flex;
     justify-content: space-between;

@@ -23,8 +23,8 @@
 .logo {
   fill: rgba(23, 61, 51, 1);
 }
-.logoWrapper:hover,
-.logoWrapper:focus {
+.logoContainer:hover,
+.logoContainer:focus {
   .logo {
     fill: rgba(151, 210, 139, 1);
   }

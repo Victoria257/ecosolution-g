@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 
 import css from 'components/footer/footer.module.css';
@@ -9,6 +9,15 @@ import { FacebookForFooter } from 'components/svg/facebookForFooter';
 import { LogoForFooter } from 'components/svg/logoForFooter';
 
 export const Footer = () => {
+  const [isHover, setIsHover] = useState(false);
+
+  const handleHover = () => {
+    setIsHover(true);
+  };
+
+  const handleBlur = () => {
+    setIsHover(false);
+  };
   return (
     <section className={css.container}>
       <div className={css.footerWrapper}>
@@ -22,7 +31,9 @@ export const Footer = () => {
                 offset={-112}
                 className={css.logoWrapper}
               >
-                <LogoForFooter />
+                <div className={css.logoContainer} tabIndex={0}>
+                  <LogoForFooter className={css.logo} />
+                </div>
               </Link>
               <Link
                 to="main"
@@ -30,12 +41,23 @@ export const Footer = () => {
                 duration={1000}
                 offset={-112}
                 className={css.arrowWrapper}
+                onFocus={handleHover}
+                onMouseOver={handleHover}
+                onMouseOut={handleBlur}
+                onBlur={handleBlur}
+                tabIndex={0}
               >
                 <Arrow
+                  tabIndex={0}
                   width="32px"
                   height="32px"
                   transform="rotate(-45deg)"
-                  backgroundColor="rgba(151, 210, 139, 1)"
+                  backgroundColor={
+                    isHover ? 'rgba(23, 61, 51, 1)' : 'rgba(151, 210, 139, 1)'
+                  }
+                  color={
+                    !isHover ? 'rgba(23, 61, 51, 1)' : 'rgba(151, 210, 139, 1)'
+                  }
                 />
               </Link>
             </div>

@@ -6,6 +6,7 @@ export const Arrow = ({
   transform,
   border,
   backgroundColor,
+  color,
 }) => {
   return (
     <div>
@@ -20,14 +21,14 @@ export const Arrow = ({
         <rect width="60" height="60" rx="30" fill="none" />
         <path
           d="M26.9976 22.9867L37.0125 22.9867L37.0125 33.0017"
-          stroke="#173D33"
+          stroke={color}
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M22.989 37.0109L36.8731 23.1269"
-          stroke="#173D33"
+          stroke={color}
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"

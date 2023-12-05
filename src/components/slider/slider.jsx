@@ -13,27 +13,49 @@ import 'slick-carousel/slick/slick-theme.css';
 import css from './slider.module.css';
 import { useNavigate } from 'react-router-dom';
 
-function SampleNextArrow({ onClick }) {
+function SampleNextArrow({ onClick, isHoverNext, handleBlur, handleHover }) {
   return (
-    <div className={css.nextArrow} onClick={onClick}>
+    <div
+      className={css.nextArrow}
+      onClick={onClick}
+      tabIndex={0}
+      onFocus={() => handleHover('next')}
+      onMouseOver={() => handleHover('next')}
+      onMouseOut={() => handleBlur('next')}
+      onBlur={() => handleBlur('next')}
+    >
       <Arrow
         width={66}
         height={66}
         transform="rotate(-135deg)"
-        border="solid 1px rgba(23, 61, 51, 1)"
+        border={
+          !isHoverNext
+            ? ' solid 1px  rgba(23, 61, 51, 1)'
+            : 'solid 3px rgba(151, 210, 139, 1)'
+        }
+        color={!isHoverNext ? 'rgba(23, 61, 51, 1)' : 'rgba(151, 210, 139, 1)'}
       />
     </div>
   );
 }
 
-function SamplePrevArrow({ onClick }) {
+function SamplePrevArrow({ onClick, isHoverPrev, handleBlur, handleHover }) {
   return (
-    <div className={css.prevArrow} onClick={onClick}>
+    <div className={css.prevArrow} onClick={onClick} tabIndex={0}>
       <Arrow
         width={66}
         height={66}
         transform="rotate(-135deg)"
-        border="solid 1px rgba(23, 61, 51, 1)"
+        border={
+          !isHoverPrev
+            ? ' solid 1px  rgba(23, 61, 51, 1)'
+            : 'solid 1px rgba(151, 210, 139, 1)'
+        }
+        color={!isHoverPrev ? 'rgba(23, 61, 51, 1)' : 'rgba(151, 210, 139, 1)'}
+        onFocus={() => handleHover('prev')}
+        onMouseOver={() => handleHover('prev')}
+        onMouseOut={() => handleBlur('prev')}
+        onBlur={() => handleBlur('prev')}
       />
     </div>
   );
@@ -41,7 +63,45 @@ function SamplePrevArrow({ onClick }) {
 
 export default function SimpleSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [hoverStates, setHoverStates] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+  const [isHoverNext, setIsHoverNext] = useState(false);
+  const [isHoverPrev, setIsHoverPrev] = useState(false);
+
   const navigate = useNavigate();
+
+  const handleHover = e => {
+    if (e === 'prev') {
+      setIsHoverPrev(true);
+    }
+    if (e === 'next') setIsHoverNext(true);
+  };
+
+  const handleBlur = e => {
+    if (e === 'prev') {
+      setIsHoverPrev(false);
+    }
+    if (e === 'next') setIsHoverNext(false);
+  };
+
+  const handleHoverArrow = index => {
+    const newHoverStates = [...hoverStates];
+    newHoverStates[index] = true;
+    setHoverStates(newHoverStates);
+  };
+  const handleBlurArrow = index => {
+    const newHoverStates = [...hoverStates];
+    newHoverStates[index] = false;
+    setHoverStates(newHoverStates);
+  };
+  const handleClick = () => {
+    navigate('/description');
+  };
 
   const totalSlides = '05';
 
@@ -53,8 +113,20 @@ export default function SimpleSlider() {
     margin: '0 24px',
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: (
+      <SampleNextArrow
+        isHover={isHoverNext}
+        handleBlur={handleBlur}
+        handleHover={handleHover}
+      />
+    ),
+    prevArrow: (
+      <SamplePrevArrow
+        isHover={isHoverPrev}
+        handleBlur={handleBlur}
+        handleHover={handleHover}
+      />
+    ),
     beforeChange: (oldIndex, newIndex) => {
       setCurrentSlide(newIndex);
     },
@@ -75,9 +147,6 @@ export default function SimpleSlider() {
     ],
   };
 
-  const handleClick = () => {
-    navigate('/description');
-  };
   return (
     <div>
       <div className={css.counterSliderWrapper}>
@@ -98,11 +167,27 @@ export default function SimpleSlider() {
               <h3 className={css.description}>
                 Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”
               </h3>
-              <div className={css.arrowWrapper} onClick={handleClick}>
+              <div
+                onClick={handleClick}
+                className={css.arrowWrapper}
+                onFocus={() => handleHoverArrow(0)}
+                onMouseOver={() => handleHoverArrow(0)}
+                onMouseOut={() => handleBlurArrow(0)}
+                onBlur={() => handleBlurArrow(0)}
+              >
                 <Arrow
                   width="60px"
                   height="60px"
-                  backgroundColor="rgba(151, 210, 139, 1)"
+                  backgroundColor={
+                    hoverStates[0]
+                      ? 'rgba(23, 61, 51, 1)'
+                      : 'rgba(151, 210, 139, 1)'
+                  }
+                  color={
+                    !hoverStates[0]
+                      ? 'rgba(23, 61, 51, 1)'
+                      : 'rgba(151, 210, 139, 1)'
+                  }
                 />
               </div>
             </div>
@@ -121,11 +206,27 @@ export default function SimpleSlider() {
               <h3 className={css.description}>
                 Zhytomyr city Private Enterprise “Bosch”
               </h3>
-              <div className={css.arrowWrapper} onClick={handleClick}>
+              <div
+                className={css.arrowWrapper}
+                onClick={handleClick}
+                onFocus={() => handleHoverArrow(1)}
+                onMouseOver={() => handleHoverArrow(1)}
+                onMouseOut={() => handleBlurArrow(1)}
+                onBlur={() => handleBlurArrow(1)}
+              >
                 <Arrow
                   width="60px"
                   height="60px"
-                  backgroundColor="rgba(151, 210, 139, 1)"
+                  backgroundColor={
+                    hoverStates[1]
+                      ? 'rgba(23, 61, 51, 1)'
+                      : 'rgba(151, 210, 139, 1)'
+                  }
+                  color={
+                    !hoverStates[1]
+                      ? 'rgba(23, 61, 51, 1)'
+                      : 'rgba(151, 210, 139, 1)'
+                  }
                 />
               </div>
             </div>
@@ -144,11 +245,27 @@ export default function SimpleSlider() {
               <h3 className={css.description}>
                 Rivne city Private Enterprise “Biotech”
               </h3>
-              <div className={css.arrowWrapper} onClick={handleClick}>
+              <div
+                className={css.arrowWrapper}
+                onClick={handleClick}
+                onFocus={() => handleHoverArrow(2)}
+                onMouseOver={() => handleHoverArrow(2)}
+                onMouseOut={() => handleBlurArrow(2)}
+                onBlur={() => handleBlurArrow(2)}
+              >
                 <Arrow
                   width="60px"
                   height="60px"
-                  backgroundColor="rgba(151, 210, 139, 1)"
+                  backgroundColor={
+                    hoverStates[2]
+                      ? 'rgba(23, 61, 51, 1)'
+                      : 'rgba(151, 210, 139, 1)'
+                  }
+                  color={
+                    !hoverStates[2]
+                      ? 'rgba(23, 61, 51, 1)'
+                      : 'rgba(151, 210, 139, 1)'
+                  }
                 />
               </div>
             </div>
@@ -167,11 +284,27 @@ export default function SimpleSlider() {
               <h3 className={css.description}>
                 Kherson city Private Enterprise “HealthyFarm”
               </h3>
-              <div className={css.arrowWrapper} onClick={handleClick}>
+              <div
+                className={css.arrowWrapper}
+                onClick={handleClick}
+                onFocus={() => handleHoverArrow(3)}
+                onMouseOver={() => handleHoverArrow(3)}
+                onMouseOut={() => handleBlurArrow(3)}
+                onBlur={() => handleBlurArrow(3)}
+              >
                 <Arrow
                   width="60px"
                   height="60px"
-                  backgroundColor="rgba(151, 210, 139, 1)"
+                  backgroundColor={
+                    hoverStates[3]
+                      ? 'rgba(23, 61, 51, 1)'
+                      : 'rgba(151, 210, 139, 1)'
+                  }
+                  color={
+                    !hoverStates[3]
+                      ? 'rgba(23, 61, 51, 1)'
+                      : 'rgba(151, 210, 139, 1)'
+                  }
                 />
               </div>
             </div>
@@ -190,11 +323,27 @@ export default function SimpleSlider() {
               <h3 className={css.description}>
                 Zaporizhia city Private Enterprise “Biotech”
               </h3>
-              <div className={css.arrowWrapper} onClick={handleClick}>
+              <div
+                className={css.arrowWrapper}
+                onClick={handleClick}
+                onFocus={() => handleHoverArrow(4)}
+                onMouseOver={() => handleHoverArrow(4)}
+                onMouseOut={() => handleBlurArrow(4)}
+                onBlur={() => handleBlurArrow(4)}
+              >
                 <Arrow
                   width="60px"
                   height="60px"
-                  backgroundColor="rgba(151, 210, 139, 1)"
+                  backgroundColor={
+                    hoverStates[4]
+                      ? 'rgba(23, 61, 51, 1)'
+                      : 'rgba(151, 210, 139, 1)'
+                  }
+                  color={
+                    !hoverStates[4]
+                      ? 'rgba(23, 61, 51, 1)'
+                      : 'rgba(151, 210, 139, 1)'
+                  }
                 />
               </div>
             </div>

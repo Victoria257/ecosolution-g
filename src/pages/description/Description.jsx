@@ -18,6 +18,7 @@ export const Description = () => {
             width="32px"
             transform="rotate(225deg)"
             backgroundColor="rgba(151, 210, 139, 1)"
+            color="rgba(23, 61, 51, 1)"
           />
           <span className={css.buttonText}> Back</span>
         </button>

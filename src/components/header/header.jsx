@@ -52,11 +52,12 @@ export const Header = () => {
           duration={1000}
           offset={-112}
           className={css.logoWrapper}
+          tabIndex={0}
         >
           <Logo />
         </Link>
         <div className={css.rightWrapper}>
-          <div className={css.menuWrapper} onClick={handleClick}>
+          <div className={css.menuWrapper} onClick={handleClick} tabIndex={0}>
             <Menu className={css.menu} />
           </div>
           {showBackdrop && (

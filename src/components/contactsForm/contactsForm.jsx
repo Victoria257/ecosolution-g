@@ -157,6 +157,7 @@ export const ContactsForm = () => {
                 height="32px"
                 transform="rotate(45deg)"
                 backgroundColor="rgba(151, 210, 139, 1)"
+                color="rgba(23, 61, 51, 1)"
               />
             </div>
           </button>

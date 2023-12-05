@@ -4,7 +4,6 @@ import { Element, Link } from 'react-scroll';
 import css from 'components/main/main.module.css';
 import { Arrow } from 'components/svg/arrow';
 
-
 export const Main = () => {
   return (
     <Element name="main">
@@ -26,6 +25,7 @@ export const Main = () => {
                 duration={1000}
                 offset={-112}
                 className={css.more}
+                tabIndex={0}
               >
                 <span className={css.moreText}>Learn more</span>
                 <div className={css.arrow}>
@@ -33,6 +33,7 @@ export const Main = () => {
                     width="32px"
                     backgroundColor="rgba(151, 210, 139, 1)"
                     transform="rotate(45deg)"
+                    color="rgba(23, 61, 51, 1)"
                   />
                 </div>
               </Link>

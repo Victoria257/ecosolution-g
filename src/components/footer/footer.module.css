@@ -18,6 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 .logo {
   fill: rgba(23, 61, 51, 1);

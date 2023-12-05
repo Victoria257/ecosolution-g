@@ -11,7 +11,7 @@ import { Arrow } from 'components/svg/arrow';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import css from './slider.module.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function SampleNextArrow({ onClick }) {
   return (
@@ -83,8 +83,9 @@ export default function SimpleSlider() {
       <div className={css.counterSliderWrapper}>
         <p className={css.counterSlider}>
           {currentSlide + 1 < 10
-            ? `0${currentSlide + 1} / ${totalSlides}`
-            : `${currentSlide + 1} / ${totalSlides}`}
+            ? `0${currentSlide + 1} `
+            : `${currentSlide + 1} `}
+          <span className={css.counterSliderSpan}>/ {totalSlides}</span>
         </p>
       </div>
 

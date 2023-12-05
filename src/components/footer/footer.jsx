@@ -15,7 +15,15 @@ export const Footer = () => {
         <div className={css.footer}>
           <div className={css.wrapperLogoAndSocial}>
             <div className={css.logoWrapper}>
-              <LogoForFooter />
+              <Link
+                to="main"
+                smooth={true}
+                duration={1000}
+                offset={-112}
+                className={css.logoWrapper}
+              >
+                <LogoForFooter />
+              </Link>
               <Link
                 to="main"
                 smooth={true}

@@ -46,9 +46,15 @@ export const Header = () => {
   return (
     <section className={css.container} style={headerStyle}>
       <div className={css.wrapper}>
-        <div className={css.logoWrapper}>
+        <Link
+          to="main"
+          smooth={true}
+          duration={1000}
+          offset={-112}
+          className={css.logoWrapper}
+        >
           <Logo />
-        </div>
+        </Link>
         <div className={css.rightWrapper}>
           <div className={css.menuWrapper} onClick={handleClick}>
             <Menu className={css.menu} />

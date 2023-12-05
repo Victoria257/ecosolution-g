@@ -39,6 +39,10 @@
   line-height: normal;
   letter-spacing: -1.12px;
 }
+.counterSliderSpan {
+  color: rgba(23, 61, 51, 0.25);
+  margin-left: 10px;
+}
 .sliderContainer {
   background-color: rgba(234, 237, 241, 1);
 }

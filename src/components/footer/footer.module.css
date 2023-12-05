@@ -19,7 +19,15 @@
   align-items: center;
   justify-content: space-between;
 }
-
+.logo {
+  fill: rgba(23, 61, 51, 1);
+}
+.logoWrapper:hover,
+.logoWrapper:focus {
+  .logo {
+    fill: rgba(151, 210, 139, 1);
+  }
+}
 .arrowWrapper {
   margin-left: 12px;
   cursor: pointer;
@@ -79,6 +87,7 @@
     display: block;
     width: 50%;
   }
+
   .arrowWrapper {
     margin: 0;
     position: absolute;
@@ -113,6 +122,35 @@
     text-align: left;
     padding: 0;
   }
+}
+.socialFB {
+  &:hover,
+  &:focus {
+    .facebookIcon {
+      fill: rgba(151, 210, 139, 1);
+    }
+    .facebookIconStroke {
+      stroke: rgba(151, 210, 139, 1);
+    }
+  }
+}
+.socialInsta {
+  &:hover,
+  &:focus {
+    .InstaIcon {
+      stroke: rgba(151, 210, 139, 1);
+    }
+  }
+}
+.facebookIcon {
+  fill: rgba(23, 61, 51, 1);
+}
+
+.facebookIconStroke {
+  stroke: rgba(23, 61, 51, 1);
+}
+.InstaIcon {
+  stroke: rgba(23, 61, 51, 1);
 }
 
 @media screen and (min-width: 1280px) {

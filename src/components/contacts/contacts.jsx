@@ -4,10 +4,11 @@ import { Element } from 'react-scroll';
 import css from 'components/contacts/contacts.module.css';
 import { ContactsForm } from 'components/contactsForm/contactsForm';
 import { Sms } from 'components/svg/sms';
-import { Facebook } from 'components/svg/facebook';
-import { Instagram } from 'components/svg/instagram';
+
 import { Map } from 'components/svg/map';
 import { Call } from 'components/svg/call';
+import { FacebookForContacts } from 'components/svg/facebookForContacts';
+import { InstagramForContacts } from 'components/svg/instagramForContacts';
 
 export const Contacts = () => {
   return (
@@ -70,8 +71,9 @@ export const Contacts = () => {
                       href="https://www.facebook.com/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className={css.socialFB}
                     >
-                      <Facebook color="rgba(23, 61, 51, 1)" />
+                      <FacebookForContacts />
                     </a>
                   </li>
                   <li>
@@ -79,8 +81,9 @@ export const Contacts = () => {
                       href="https://www.instagram.com/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className={css.socialInsta}
                     >
-                      <Instagram color="rgba(23, 61, 51, 1)" />
+                      <InstagramForContacts />
                     </a>
                   </li>
                 </ul>

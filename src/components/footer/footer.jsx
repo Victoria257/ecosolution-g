@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 import css from 'components/footer/footer.module.css';
-import { Logo } from 'components/svg/logo';
+
 import { Arrow } from 'components/svg/arrow';
-import { Facebook } from 'components/svg/facebook';
-import { Instagram } from 'components/svg/instagram';
+import { InstagramForFooter } from 'components/svg/instagramForFooter';
+import { FacebookForFooter } from 'components/svg/facebookForFooter';
+import { LogoForFooter } from 'components/svg/logoForFooter';
 
 export const Footer = () => {
   return (
@@ -14,7 +15,7 @@ export const Footer = () => {
         <div className={css.footer}>
           <div className={css.wrapperLogoAndSocial}>
             <div className={css.logoWrapper}>
-              <Logo className={css.logo} />
+              <LogoForFooter />
               <Link
                 to="main"
                 smooth={true}
@@ -35,15 +36,17 @@ export const Footer = () => {
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className={css.socialFB}
               >
-                <Facebook color="rgba(23, 61, 51, 1)" />
+                <FacebookForFooter />
               </a>
               <a
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className={css.socialInsta}
               >
-                <Instagram color="rgba(23, 61, 51, 1)" />
+                <InstagramForFooter />
               </a>
             </div>
           </div>

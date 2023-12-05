@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import css from 'components/contactsForm/contactsForm.module.css';
 import { Arrow } from 'components/svg/arrow';
 
@@ -25,7 +28,7 @@ export const ContactsForm = () => {
     const fullNamePattern = /^[a-zA-Z]+ [a-zA-Z]+$/;
     const isFullNameValid = fullNamePattern.test(formData.fullName);
 
-    const phonePattern = /^ +? [0 - 9]{ 12}$/;
+    const phonePattern = /^380\d{9}$/;
     const phoneValid = phonePattern.test(formData.phone);
 
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -58,11 +61,26 @@ export const ContactsForm = () => {
         phone: '',
         message: '',
       });
+      setSubmit(false);
+      showToast();
     }
+  };
+
+  const showToast = () => {
+    toast.success('Сontacts sent successfully!', {
+      position: 'bottom-right',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   return (
     <form action="" className={css.container} onSubmit={handleSubmit}>
+      <ToastContainer />
       <div className={css.form}>
         <ul className={css.list}>
           <li
@@ -75,7 +93,6 @@ export const ContactsForm = () => {
             <h2>* Full name:</h2>
             <input
               name="fullName"
-              type="text"
               placeholder="John Rosie"
               value={formData.fullName}
               onChange={handleChange}
@@ -113,7 +130,6 @@ export const ContactsForm = () => {
             <h2>* Phone:</h2>
             <input
               name="phone"
-              type="phone"
               placeholder="380961234567"
               value={formData.phone}
               onChange={handleChange}
@@ -126,7 +142,6 @@ export const ContactsForm = () => {
             <h2>Message:</h2>
             <textarea
               name="message"
-              type="text"
               placeholder="Your message"
               value={formData.message}
               onChange={handleChange}

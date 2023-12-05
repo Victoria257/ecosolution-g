@@ -80,6 +80,35 @@
   gap: 32px;
   margin-top: 20px;
 }
+.socialFB {
+  &:hover,
+  &:focus {
+    .facebookIcon {
+      fill: rgba(151, 210, 139, 1);
+    }
+    .facebookIconStroke {
+      stroke: rgba(151, 210, 139, 1);
+    }
+  }
+}
+.socialInsta {
+  &:hover,
+  &:focus {
+    .InstaIcon {
+      stroke: rgba(151, 210, 139, 1);
+    }
+  }
+}
+.facebookIcon {
+  fill: rgba(23, 61, 51, 1);
+}
+
+.facebookIconStroke {
+  stroke: rgba(23, 61, 51, 1);
+}
+.InstaIcon {
+  stroke: rgba(23, 61, 51, 1);
+}
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .container {

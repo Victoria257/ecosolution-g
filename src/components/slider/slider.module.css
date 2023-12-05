@@ -7,6 +7,12 @@
   top: -93px;
   cursor: pointer;
 }
+.nextArrow:hover,
+.nextArrow:focus,
+.prevArrow:hover,
+.prevArrow:focus {
+  stroke: rgb(56, 220, 24);
+}
 
 .prevArrow {
   position: absolute;
@@ -37,12 +43,7 @@
   outline: solid red 1px;
   margin: 0 15px;
 } */
-.container {
-  border-right: solid 12px rgba(243, 245, 250, 1);
-  border-left: solid 12px rgba(243, 245, 250, 1);
-  object-fit: cover;
-  box-sizing: border-box;
-}
+
 .container img {
   width: 100%;
   display: block;
@@ -117,9 +118,15 @@
   .sliderContainer {
     margin-top: 36px;
   }
-
+  .container {
+    border-right: solid 12px rgba(243, 245, 250, 1);
+    border-left: solid 12px rgba(243, 245, 250, 1);
+    object-fit: cover;
+    box-sizing: border-box;
+  }
   .container img {
-    width: auto;
+    width: 100%;
+    display: block;
   }
 
   .descriptionWrapper {
@@ -133,6 +140,7 @@
   .arrowWrapper {
     display: flex;
     align-items: flex-end;
+    cursor: pointer;
   }
   .captionWrapper::before {
     margin-top: 16px;
@@ -171,7 +179,16 @@
   .sliderContainer {
     margin-top: 120px;
   }
-
+  .container {
+    border-right: solid 24px rgba(243, 245, 250, 1);
+    border-left: solid 24px rgba(243, 245, 250, 1);
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+  .container img {
+    width: 100%;
+    display: block;
+  }
   .content {
     padding: 35px 48px;
   }

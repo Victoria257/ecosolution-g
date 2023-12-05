@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 import { useEffect } from 'react';
 
 import { Menu } from 'components/svg/menu';
-import { Logo } from 'components/logo/logo';
+import { Logo } from 'components/svg/logo';
 import { useState } from 'react';
 import { BurgerMenu } from 'components/burgerMenu/burgerMenu';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 import css from 'components/footer/footer.module.css';
-import { Logo } from 'components/logo/logo';
+import { Logo } from 'components/svg/logo';
 import { Arrow } from 'components/svg/arrow';
 import { Facebook } from 'components/svg/facebook';
 import { Instagram } from 'components/svg/instagram';

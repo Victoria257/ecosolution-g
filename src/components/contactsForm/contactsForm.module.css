@@ -90,6 +90,14 @@
     margin-top: 32px;
   }
 }
+.buttonWrapper:hover,
+.buttonWrapper:focus {
+  .button {
+    background-color: rgba(23, 61, 51, 1);
+    color: rgba(151, 210, 139, 1);
+    border-color: rgba(23, 61, 51, 1);
+  }
+}
 .button {
   display: flex;
   align-items: center;

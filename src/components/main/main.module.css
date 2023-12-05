@@ -39,6 +39,14 @@
   align-items: center;
   justify-content: center;
 }
+.more:hover,
+.more:focus {
+  border-color: rgba(23, 61, 51, 1);
+  background-color: rgba(23, 61, 51, 1);
+  .moreText {
+    color: rgba(151, 210, 139, 1);
+  }
+}
 .moreText {
   color: rgba(23, 61, 51, 1);
   font-family: Fira Sans;

@@ -175,6 +175,18 @@
   display: flex;
   justify-content: center;
 }
+
+.buttonWrapper:hover,
+.buttonWrapper:focus {
+  .button {
+    background-color: rgba(23, 61, 51, 1);
+    color: rgba(151, 210, 139, 1);
+  }
+  .dot {
+    background-color: rgba(151, 210, 139, 1);
+  }
+}
+
 .button {
   display: flex;
   padding: 10px 16px;

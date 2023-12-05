@@ -46,7 +46,9 @@ export const Header = () => {
   return (
     <section className={css.container} style={headerStyle}>
       <div className={css.wrapper}>
-        <Logo />
+        <div className={css.logoWrapper}>
+          <Logo />
+        </div>
         <div className={css.rightWrapper}>
           <div className={css.menuWrapper} onClick={handleClick}>
             <Menu className={css.menu} />

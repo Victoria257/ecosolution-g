@@ -35,6 +35,16 @@
     padding-right: 100px;
   }
 }
+.logoWrapper:hover,
+.logoWrapper:focus {
+  .logo {
+    fill: rgba(151, 210, 139, 1);
+  }
+}
+.logo {
+  fill: rgba(23, 61, 51, 1);
+}
+
 .uk-scrolling-class {
   background-color: rgb(212, 218, 226);
   border-bottom: solid 1px rgb(204, 209, 224);
@@ -49,6 +59,11 @@
   padding: 12px;
   cursor: pointer;
 }
+.menuWrapper:hover,
+.menuWrapper:focus {
+  background-color: rgba(151, 210, 139, 1);
+}
+
 .menu {
   width: 16px;
   height: 16px;
@@ -69,6 +84,19 @@
 
   @media screen and (min-width: 768px) {
     display: block;
+  }
+}
+.buttonWrapper:hover,
+.buttonWrapper:focus {
+  .button {
+    background-color: rgba(23, 61, 51, 1);
+  }
+
+  .buttonText {
+    color: rgba(151, 210, 139, 1);
+  }
+  .dot {
+    background-color: rgba(151, 210, 139, 1);
   }
 }
 .button {

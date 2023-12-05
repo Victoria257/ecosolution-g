@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ecosolution-g/static/css/main.744c248b.css",
-    "main.js": "/ecosolution-g/static/js/main.97029d3f.js",
+    "main.css": "/ecosolution-g/static/css/main.417516d9.css",
+    "main.js": "/ecosolution-g/static/js/main.fa3fe963.js",
     "static/media/wind-turbine-desktop-3.jpg": "/ecosolution-g/static/media/wind-turbine-desktop-3.cfd665b602c2b3bc1257.jpg",
     "static/media/photo-1.png": "/ecosolution-g/static/media/photo-1.a8c12311c0eadd8212bf.png",
     "static/media/photo-2.png": "/ecosolution-g/static/media/photo-2.508310ef098a18003b2b.png",
@@ -31,11 +31,11 @@
     "static/media/slick.ttf": "/ecosolution-g/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/ecosolution-g/index.html",
     "static/media/slick.woff": "/ecosolution-g/static/media/slick.295183786cd8a1389865.woff",
-    "main.744c248b.css.map": "/ecosolution-g/static/css/main.744c248b.css.map",
-    "main.97029d3f.js.map": "/ecosolution-g/static/js/main.97029d3f.js.map"
+    "main.417516d9.css.map": "/ecosolution-g/static/css/main.417516d9.css.map",
+    "main.fa3fe963.js.map": "/ecosolution-g/static/js/main.fa3fe963.js.map"
   },
   "entrypoints": [
-    "static/css/main.744c248b.css",
-    "static/js/main.97029d3f.js"
+    "static/css/main.417516d9.css",
+    "static/js/main.fa3fe963.js"
   ]
 }

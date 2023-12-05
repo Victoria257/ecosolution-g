@@ -21,13 +21,13 @@ export const Contacts = () => {
             <li className={css.set}>
               <h3 className={css.setTitle}>Phone:</h3>
               <ul className={css.listPhones}>
-                <li>
+                <li className={css.wrapperCallIcons}>
                   <a href="tel:+380981234567" className={css.line}>
                     <Call />
                     <p> 38 (098) 12 34 567</p>
                   </a>
                 </li>
-                <li>
+                <li className={css.wrapperCallIcons2}>
                   <a href="tel:+380931234567" className={css.line}>
                     <Call />
                     <p> 38 (093) 12 34 567</p>
@@ -38,7 +38,10 @@ export const Contacts = () => {
             <li className={css.set}>
               <h3 className={css.setTitle}>E-mail:</h3>
               <div>
-                <a href="mailto:office@ecosolution.com" className={css.line}>
+                <a
+                  href="mailto:office@ecosolution.com"
+                  className={`${css.line} ${css.wrapperSmsIcon}`}
+                >
                   <Sms />
                   <p> office@ecosolution.com</p>
                 </a>
@@ -51,7 +54,7 @@ export const Contacts = () => {
                   href="https://www.google.com/maps/search/79005,+Ukraine,+Lvivstreet.+Shota+Rustaveli,+7/@49.8313557,24.0323789,17z/data=!3m1!4b1?entry=ttu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={css.line}
+                  className={`${css.line} ${css.wrapperMapIcon}`}
                 >
                   <Map width={24} />
                   <p> 79005, Ukraine, Lvivstreet Shota Rustaveli, 7</p>

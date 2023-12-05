@@ -104,6 +104,22 @@
   }
 }
 
+.icons {
+  stroke: rgba(23, 61, 51, 1);
+}
+.wrapperCallIcons:hover,
+.wrapperCallIcons:focus,
+.wrapperCallIcons2:focus,
+.wrapperCallIcons2:hover,
+.wrapperMapIcon:hover,
+.wrapperMapIcon:focus,
+.wrapperSmsIcon:focus,
+.wrapperSmsIcon:hover {
+  .icons {
+    stroke: rgba(151, 210, 139, 1);
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .container {
     padding-top: 120px;
@@ -131,6 +147,7 @@
   .line {
     margin-top: 16px;
   }
+
   .socialWrapper {
     margin-top: 32px;
   }

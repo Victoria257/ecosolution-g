@@ -7,12 +7,6 @@
   top: -93px;
   cursor: pointer;
 }
-.nextArrow:hover,
-.nextArrow:focus,
-.prevArrow:hover,
-.prevArrow:focus {
-  stroke: rgb(56, 220, 24);
-}
 
 .prevArrow {
   position: absolute;
@@ -165,6 +159,9 @@
   }
   .prevArrow {
     top: -210px;
+  }
+  .arrowWrapper {
+    align-items: flex-start;
   }
   .counterSliderWrapper {
     display: flex;

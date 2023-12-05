@@ -22,7 +22,11 @@
   top: -93px;
   cursor: pointer;
 }
-
+.arrowWrapper {
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
 .counterSlider {
   margin-bottom: 19px;
 

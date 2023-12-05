@@ -1,28 +1,16 @@
-import { Header } from './header/header';
-import { Main } from './main/main';
-import { About } from './about/about';
-import { Electricity } from './electricity/electricity';
-import { Cases } from './cases/cases';
-import { Questions } from './questions/questions';
-import { Contacts } from './contacts/contacts';
-import { Footer } from './footer/footer';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { Description } from 'pages/description/Description';
+import { Home } from 'pages/home/Home';
 
-import css from '../app.module.css';
 export const App = () => {
   return (
-    <div className={css.wrapper}>
-      <div className={css.container}>
-        <Header />
-        <main>
-          <Main />
-          <About />
-          <Electricity />
-          <Cases />
-          <Questions />
-          <Contacts />
-        </main>
-        <Footer />
-      </div>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/description" element={<Description />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
+    </>
   );
 };

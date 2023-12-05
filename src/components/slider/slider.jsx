@@ -11,6 +11,7 @@ import { Arrow } from 'components/svg/arrow';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import css from './slider.module.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 function SampleNextArrow({ onClick }) {
   return (
@@ -40,6 +41,8 @@ function SamplePrevArrow({ onClick }) {
 
 export default function SimpleSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
+
   const totalSlides = '05';
 
   const settings = {
@@ -71,6 +74,10 @@ export default function SimpleSlider() {
       },
     ],
   };
+
+  const handleClick = () => {
+    navigate('/description');
+  };
   return (
     <div>
       <div className={css.counterSliderWrapper}>
@@ -90,7 +97,7 @@ export default function SimpleSlider() {
               <h3 className={css.description}>
                 Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”
               </h3>
-              <div className={css.arrowWrapper}>
+              <div className={css.arrowWrapper} onClick={handleClick}>
                 <Arrow
                   width="60px"
                   height="60px"
@@ -113,7 +120,7 @@ export default function SimpleSlider() {
               <h3 className={css.description}>
                 Zhytomyr city Private Enterprise “Bosch”
               </h3>
-              <div className={css.arrowWrapper}>
+              <div className={css.arrowWrapper} onClick={handleClick}>
                 <Arrow
                   width="60px"
                   height="60px"
@@ -136,7 +143,7 @@ export default function SimpleSlider() {
               <h3 className={css.description}>
                 Rivne city Private Enterprise “Biotech”
               </h3>
-              <div className={css.arrowWrapper}>
+              <div className={css.arrowWrapper} onClick={handleClick}>
                 <Arrow
                   width="60px"
                   height="60px"
@@ -159,7 +166,7 @@ export default function SimpleSlider() {
               <h3 className={css.description}>
                 Kherson city Private Enterprise “HealthyFarm”
               </h3>
-              <div className={css.arrowWrapper}>
+              <div className={css.arrowWrapper} onClick={handleClick}>
                 <Arrow
                   width="60px"
                   height="60px"
@@ -182,7 +189,7 @@ export default function SimpleSlider() {
               <h3 className={css.description}>
                 Zaporizhia city Private Enterprise “Biotech”
               </h3>
-              <div className={css.arrowWrapper}>
+              <div className={css.arrowWrapper} onClick={handleClick}>
                 <Arrow
                   width="60px"
                   height="60px"

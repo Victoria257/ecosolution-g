@@ -1,4 +1,4 @@
-Ecosolution Landing Page
+<!-- Ecosolution Landing Page
 
 This is a test project showcasing a website about renewable energy for a resume.
 
@@ -67,4 +67,4 @@ UUID: The uuid library is used for generating unique identifiers.
 Viktoriia Bezpalova - Front-end Developer.
 https://www.linkedin.com/in/viktoria-bezpalova-68a877260/
 
-Volodymyr Bezpalov -QA Engineer. https://www.linkedin.com/in/volodymyr-bezpalov/
+Volodymyr Bezpalov -QA Engineer. https://www.linkedin.com/in/volodymyr-bezpalov/ -->

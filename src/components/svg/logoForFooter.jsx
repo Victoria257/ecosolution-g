@@ -1,4 +1,4 @@
-import css from 'components/footer/footer.module.css';
+import css from 'sections/footer/footer.module.css';
 
 export const LogoForFooter = () => {
   return (

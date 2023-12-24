@@ -1,4 +1,4 @@
-import css from '../contacts/contacts.module.css';
+import css from 'sections/contacts/contacts.module.css';
 
 export const Map = ({ width }) => {
   return (

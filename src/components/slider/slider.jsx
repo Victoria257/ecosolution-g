@@ -28,6 +28,8 @@ function SampleNextArrow({ onClick, isHoverNext, handleBlur, handleHover }) {
         width={66}
         height={66}
         transform="rotate(-135deg)"
+        transition="border 0.8s, color 0.8s"
+        aria-label="Next photo"
         border={
           !isHoverNext
             ? ' solid 1px  rgba(23, 61, 51, 1)'
@@ -46,6 +48,8 @@ function SamplePrevArrow({ onClick, isHoverPrev, handleBlur, handleHover }) {
         width={66}
         height={66}
         transform="rotate(-135deg)"
+        transition="border 0.8s, color 0.8s"
+        aria-label="Previous photo"
         border={
           !isHoverPrev
             ? ' solid 1px  rgba(23, 61, 51, 1)'
@@ -178,6 +182,8 @@ export default function SimpleSlider() {
                 <Arrow
                   width="60px"
                   height="60px"
+                  transition="backgroundColor 0.8s, color 0.8s"
+                  aria-label="Open more information"
                   backgroundColor={
                     hoverStates[0]
                       ? 'rgba(23, 61, 51, 1)'
@@ -217,6 +223,8 @@ export default function SimpleSlider() {
                 <Arrow
                   width="60px"
                   height="60px"
+                  transition="backgroundColor 0.8s, color 0.8s"
+                  aria-label="Open more information"
                   backgroundColor={
                     hoverStates[1]
                       ? 'rgba(23, 61, 51, 1)'
@@ -256,6 +264,8 @@ export default function SimpleSlider() {
                 <Arrow
                   width="60px"
                   height="60px"
+                  transition="backgroundColor 0.8s, color 0.8s"
+                  aria-label="Open more information"
                   backgroundColor={
                     hoverStates[2]
                       ? 'rgba(23, 61, 51, 1)'
@@ -295,6 +305,8 @@ export default function SimpleSlider() {
                 <Arrow
                   width="60px"
                   height="60px"
+                  transition="backgroundColor 0.8s, color 0.8s"
+                  aria-label="Open more information"
                   backgroundColor={
                     hoverStates[3]
                       ? 'rgba(23, 61, 51, 1)'
@@ -334,6 +346,8 @@ export default function SimpleSlider() {
                 <Arrow
                   width="60px"
                   height="60px"
+                  transition="backgroundColor 0.8s, color 0.8s"
+                  aria-label="Open more information"
                   backgroundColor={
                     hoverStates[4]
                       ? 'rgba(23, 61, 51, 1)'

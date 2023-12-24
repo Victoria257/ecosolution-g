@@ -35,9 +35,11 @@
 }
 
 .closeButton {
-  display: flex;
+  display: inline-flex;
   justify-content: flex-start;
   align-items: center;
+  text-align: center;
+  padding: 0;
   gap: 4px;
   background-color: inherit;
 
@@ -72,6 +74,10 @@
     font-size: 16px;
     letter-spacing: -0.64px;
   }
+}
+.buttonWrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 .buttonWrapper::after {
   content: '';

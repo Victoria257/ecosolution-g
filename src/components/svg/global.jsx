@@ -1,4 +1,4 @@
-import css from '../about/about.module.css';
+import css from 'sections/about/about.module.css';
 
 export const Global = () => {
   return (

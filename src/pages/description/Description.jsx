@@ -1,5 +1,5 @@
 import React from 'react';
-import { Main } from 'components/main/main';
+import { Main } from 'sections/main/main';
 import css from './description.module.css';
 import { useNavigate } from 'react-router-dom';
 import { AboutPhoto } from 'components/image/about/aboutPhoto';
@@ -23,7 +23,7 @@ export const Description = () => {
           <span className={css.buttonText}> Back</span>
         </button>
       </div>
-      <Main />
+      <Main hideButton={true} />
       <div className={css.thumb}>
         <AboutPhoto />
       </div>

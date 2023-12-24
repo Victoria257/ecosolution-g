@@ -1,4 +1,4 @@
-import css from '../footer/footer.module.css';
+import css from 'sections/footer/footer.module.css';
 
 export const InstagramForFooter = () => {
   return (

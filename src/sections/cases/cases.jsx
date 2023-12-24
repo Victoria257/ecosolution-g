@@ -1,7 +1,7 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 
-import css from 'components/cases/cases.module.css';
+import css from 'sections/cases/cases.module.css';
 import Slider from 'components/slider/slider';
 
 export const Cases = () => {

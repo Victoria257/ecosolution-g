@@ -99,7 +99,7 @@
   }
 }
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   color: rgba(23, 61, 51, 1);
   font-family: Fira Sans;

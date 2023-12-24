@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import css from 'components/electricity/electricity.module.css';
+import css from 'sections/electricity/electricity.module.css';
 
 export const Electricity = () => {
   const [electricityCount, setElectricityCount] = useState(1134147814);

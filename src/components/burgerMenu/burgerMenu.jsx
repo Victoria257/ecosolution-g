@@ -27,6 +27,7 @@ export const BurgerMenu = ({ handleClick }) => {
                 offset={-112}
                 className={css.link}
                 onClick={handleClick}
+                aria-label='Go to "main"'
               >
                 <p>Main</p>
                 <ArrowBurger className={css.arrowBurger} />
@@ -40,6 +41,7 @@ export const BurgerMenu = ({ handleClick }) => {
                 offset={-112}
                 className={css.link}
                 onClick={handleClick}
+                aria-label='Go to "about"'
               >
                 <p>About</p>
                 <ArrowBurger color="rgba(255, 255, 255, 1)" />
@@ -53,6 +55,7 @@ export const BurgerMenu = ({ handleClick }) => {
                 offset={-112}
                 className={css.link}
                 onClick={handleClick}
+                aria-label='Go to "cases"'
               >
                 <p>Cases</p>
                 <ArrowBurger color="rgba(255, 255, 255, 1)" />
@@ -66,6 +69,7 @@ export const BurgerMenu = ({ handleClick }) => {
                 offset={-112}
                 className={css.link}
                 onClick={handleClick}
+                aria-label='Go to "questions"'
               >
                 <p>FAQ</p>
                 <ArrowBurger color="rgba(255, 255, 255, 1)" />
@@ -79,6 +83,7 @@ export const BurgerMenu = ({ handleClick }) => {
                 offset={-112}
                 className={css.link}
                 onClick={handleClick}
+                aria-label='Go to "contact"'
               >
                 <p>Contact Us</p>
                 <ArrowBurger color="rgba(255, 255, 255, 1)" />
@@ -91,6 +96,7 @@ export const BurgerMenu = ({ handleClick }) => {
               target="_blank"
               rel="noopener noreferrer"
               className={css.socialFB}
+              aria-label="Open our Facebook page"
             >
               <Facebook />
             </a>
@@ -99,6 +105,7 @@ export const BurgerMenu = ({ handleClick }) => {
               target="_blank"
               rel="noopener noreferrer"
               className={css.socialInsta}
+              aria-label="Open our Instagram page"
             >
               <Instagram />
             </a>

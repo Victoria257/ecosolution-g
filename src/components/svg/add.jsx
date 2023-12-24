@@ -1,4 +1,4 @@
-import css from '../questions/questions.module.css';
+import css from 'sections/questions/questions.module.css';
 export const Add = () => {
   return (
     <svg

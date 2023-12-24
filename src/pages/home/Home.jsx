@@ -1,12 +1,12 @@
-import { Main } from 'components/main/main';
+import { Main } from 'sections/main/main';
 
-import { Header } from 'components/header/header';
-import { About } from 'components/about/about';
-import { Electricity } from 'components/electricity/electricity';
-import { Cases } from 'components/cases/cases';
-import { Questions } from 'components/questions/questions';
-import { Contacts } from 'components/contacts/contacts';
-import { Footer } from 'components/footer/footer';
+import { Header } from 'sections/header/header';
+import { About } from 'sections/about/about';
+import { Electricity } from 'sections/electricity/electricity';
+import { Cases } from 'sections/cases/cases';
+import { Questions } from 'sections/questions/questions';
+import { Contacts } from 'sections/contacts/contacts';
+import { Footer } from 'sections/footer/footer';
 
 import css from './home.module.css';
 
@@ -14,7 +14,9 @@ export const Home = () => {
   return (
     <div className={css.wrapper}>
       <div className={css.container}>
-        <Header />
+        <header>
+          <Header />
+        </header>
         <main>
           <Main />
           <About />
@@ -23,7 +25,9 @@ export const Home = () => {
           <Questions />
           <Contacts />
         </main>
-        <Footer />
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </div>
   );

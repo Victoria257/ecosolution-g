@@ -1,7 +1,7 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 
-import css from 'components/contacts/contacts.module.css';
+import css from 'sections/contacts/contacts.module.css';
 import { ContactsForm } from 'components/contactsForm/contactsForm';
 import { Sms } from 'components/svg/sms';
 
@@ -23,13 +23,21 @@ export const Contacts = () => {
               <h3 className={css.setTitle}>Phone:</h3>
               <ul className={css.listPhones}>
                 <li className={css.wrapperCallIcons}>
-                  <a href="tel:+380981234567" className={css.line}>
+                  <a
+                    href="tel:+380981234567"
+                    className={css.line}
+                    aria-label="Call by number +380981234567"
+                  >
                     <Call />
                     <p> 38 (098) 12 34 567</p>
                   </a>
                 </li>
                 <li className={css.wrapperCallIcons2}>
-                  <a href="tel:+380931234567" className={css.line}>
+                  <a
+                    href="tel:+380931234567"
+                    className={css.line}
+                    aria-label="Call by number +380931234567"
+                  >
                     <Call />
                     <p> 38 (093) 12 34 567</p>
                   </a>
@@ -42,6 +50,7 @@ export const Contacts = () => {
                 <a
                   href="mailto:office@ecosolution.com"
                   className={`${css.line} ${css.wrapperSmsIcon}`}
+                  aria-label="send a message to email office@ecosolution.com"
                 >
                   <Sms />
                   <p> office@ecosolution.com</p>
@@ -56,6 +65,7 @@ export const Contacts = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${css.line} ${css.wrapperMapIcon}`}
+                  aria-label="open map with our address"
                 >
                   <Map width={24} />
                   <p> 79005, Ukraine, Lvivstreet Shota Rustaveli, 7</p>
@@ -72,6 +82,7 @@ export const Contacts = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className={css.socialFB}
+                      aria-label="open our Facebook page"
                     >
                       <FacebookForContacts />
                     </a>
@@ -82,6 +93,7 @@ export const Contacts = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className={css.socialInsta}
+                      aria-label="open our Instagram page"
                     >
                       <InstagramForContacts />
                     </a>

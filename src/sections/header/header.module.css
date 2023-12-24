@@ -101,7 +101,7 @@
   }
 }
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
   cursor: pointer;

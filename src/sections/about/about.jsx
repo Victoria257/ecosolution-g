@@ -1,7 +1,7 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 
-import css from 'components/about/about.module.css';
+import css from 'sections/about/about.module.css';
 import { Circle } from 'components/svg/circle';
 import { Global } from 'components/svg/global';
 import { Charge } from 'components/svg/charge';
@@ -50,10 +50,16 @@ export const About = () => {
           </li>
 
           <li className={css.setPhoto}>
-            <MainPhotoWindFarm className={css.mainPhotoWindFarm} />
+            <MainPhotoWindFarm
+              className={css.mainPhotoWindFarm}
+              loading="lazy"
+            />
           </li>
           <li className={css.setPhoto}>
-            <MainPhotoSolarPanels />
+            <MainPhotoSolarPanels
+              className={css.mainPhotoSolarPanels}
+              loading="lazy"
+            />
           </li>
 
           <li className={css.setText}>

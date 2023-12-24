@@ -8,7 +8,7 @@ import { Logo } from 'components/svg/logo';
 import { useState } from 'react';
 import { BurgerMenu } from 'components/burgerMenu/burgerMenu';
 
-import css from 'components/header/header.module.css';
+import css from 'sections/header/header.module.css';
 
 export const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -30,7 +30,7 @@ export const Header = () => {
 
   const headerStyle = {
     backgroundColor: isScrolled ? 'rgba(234, 237, 241, 1)' : 'initial',
-    transition: 'background-color 0.3s ease',
+    transition: 'background-color 0.8s ease',
   };
 
   const handleClick = () => {
@@ -53,11 +53,17 @@ export const Header = () => {
           offset={-112}
           className={css.logoWrapper}
           tabIndex={0}
+          aria-label='Go to "main"'
         >
           <Logo />
         </Link>
         <div className={css.rightWrapper}>
-          <div className={css.menuWrapper} onClick={handleClick} tabIndex={0}>
+          <div
+            className={css.menuWrapper}
+            onClick={handleClick}
+            tabIndex={0}
+            aria-label="Open menu"
+          >
             <Menu className={css.menu} />
           </div>
           {showBackdrop && (
@@ -70,6 +76,7 @@ export const Header = () => {
             duration={1000}
             offset={-112}
             className={css.buttonWrapper}
+            aria-label='Go to "contacts"'
           >
             <button className={css.button}>
               <span className={css.buttonText}>Get in touch</span>

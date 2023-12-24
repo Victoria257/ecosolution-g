@@ -5,7 +5,7 @@ import windFarmTablet3 from 'image/main/tablet/wind-farms-tablet-3.jpg';
 import windFarmDesktop1 from 'image/main/desktop/wind-farms-desktop.jpg';
 import windFarmDesktop2 from 'image/main/desktop/wind-farms-desktop-2.jpg';
 import windFarmDesktop3 from 'image/main/desktop/wind-farms-desktop-3.jpg';
-import css from '../../about/about.module.css';
+import css from 'sections/about/about.module.css';
 
 export const MainPhotoWindFarm = () => {
   return (

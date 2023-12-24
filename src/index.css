@@ -8,6 +8,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  transition: 0.8s;
+}
+
 a {
   text-decoration: none;
 }

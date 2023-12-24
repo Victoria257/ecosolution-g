@@ -188,7 +188,7 @@
 }
 
 .button {
-  display: flex;
+  display: inline-flex;
   padding: 10px 16px;
   border-radius: 500px;
   border: none;

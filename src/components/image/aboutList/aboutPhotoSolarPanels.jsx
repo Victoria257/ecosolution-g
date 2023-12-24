@@ -6,7 +6,7 @@ import solarPanelsDesktop1 from 'image/main/desktop/solar-panels-desktop.jpg';
 import solarPanelsDesktop2 from 'image/main/desktop/solar-panels-desktop-2.jpg';
 import solarPanelsDesktop3 from 'image/main/desktop/solar-panels-desktop-3.jpg';
 
-import css from '../../about/about.module.css';
+import css from 'sections/about/about.module.css';
 
 export const MainPhotoSolarPanels = () => {
   return (

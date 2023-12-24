@@ -1,113 +1,70 @@
-# React homework template
+Ecosolution Landing Page
 
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+This is a test project showcasing a website about renewable energy for a resume.
 
-## Создание репозитория по шаблону
+Contents
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
-`«Create a new repository»`, как показано на изображении.
+1. Technical Specification
+2. Design Mockup
+3. Installation and Running
+4. Technologies Used
+5. Author
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+## Technical Specification
 
-На следующем шаге откроется страница создания нового репозитория. Заполни поле
-его имени, убедись что репозиторий публичный, после чего нажми кнопку
-`«Create repository from template»`.
+Technologies The landing page will be implemented using React
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+Materials The design will be based on the Final tab of the provided layout.
 
-После того как репозиторий будет создан, необходимо перейти в настройки
-созданного репозитория на вкладку `Settings` > `Actions` > `General` как
-показано на изображении.
+Technical Requirements Header Fixed header containing a logo, burger menu, and
+"Get in touch" (excluding the mobile version). Header changes color on scroll
+(refer to ui-kit). Smooth scroll to the "Contact Us" section when clicking on
+"Get in touch". Burger Menu Includes a close button, navigation menu, and social
+media links. Each menu item is clickable, leading to a smooth scroll to the
+corresponding section on the page. Full-screen height, with the bottom margin
+similar to the top margin as shown in the layout. Tablet view resembles the
+desktop version. Main Smooth scroll to the "Cases" section when clicking on
+"Learn more". About (Values) Utilize CSS Grid for the layout. On mobile, hide
+photos and display only values. Electricity Implement an automatic counter (+1
+per second) for bonus points. Cases Infinite slider. Change slides by clicking
+on corresponding buttons or dragging. Slide changes with each button click. FAQ
+The first answer is open by default. Only one answer can be open at a time.
+Contact Us Form validation. Full name, email, and phone fields are mandatory;
+the message field is optional. Smooth scroll to the "Contact Us" section when
+clicking on "Contact Us". Footer Contains an arrow; clicking it triggers a
+smooth scroll to the "Main" section.
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+## Design Mockup
 
-Проскролив страницу до самого конца, в секции `«Workflow permissions»` выбери
-опцию `«Read and write permissions»` и поставь галочку в чекбоксе. Это
-необходимо для автоматизации процесса деплоя проекта.
+[Link to Design Mockup](<https://www.figma.com/file/5MEGkkj2DR0zgkASrTsx2x/Ecosolution-(Copy)?type=design&node-id=145-1533&mode=design>)
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+## Installation and Running
 
-Теперь у тебя есть личный репозиторий проекта, со структурой файлов и папок
-репозитория-шаблона. Далее работай с ним как с любым другим личным репозиторием,
-клонируй его себе на компьютер, пиши код, делай коммиты и отправляй их на
-GitHub.
+1. Clone the repository.
+2. Install dependencies with `npm install`.
+3. Run the project with `npm start`.
 
-## Подготовка к работе
+## Technologies Used
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Установи базовые зависимости проекта командой `npm install`.
-3. Запусти режим разработки, выполнив команду `npm start`.
-4. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+React: The landing page is built using the React library framework for robust
+web development.
 
-## Деплой
+React Router: Navigation within the page is facilitated by the react-router-dom
+library.
 
-Продакшн версия проекта будет автоматически проходить линтинг, собираться и
-деплоиться на GitHub Pages, в ветку `gh-pages`, каждый раз когда обновляется
-ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
-необходимо в файле `package.json` отредактировать поле `homepage`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+React Scroll: Smooth scrolling functionality is implemented using the
+react-scroll library.
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+Slick Carousel: The "Cases" section features an infinite slider powered by the
+react-slick library.
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+React Toastify: User notifications are handled using the react-toastify library.
 
-![GitHub Pages settings](./assets/repo-settings.png)
+UUID: The uuid library is used for generating unique identifiers.
 
-### Статус деплоя
+## Author
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
+Viktoriia Bezpalova - Front-end Developer.
+https://www.linkedin.com/in/viktoria-bezpalova-68a877260/
 
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
-
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
-
-![Deployment status](./assets/deploy-status.png)
-
-### Живая страница
-
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
-
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` в файле `package.json`.
-
-### Маршрутизация
-
-Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в пропе
-`basename` точное название твоего репозитория. Слеш в начале строки обязателен.
-
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
-
-## Как это работает
-
-![How it works](./assets/how-it-works.png)
-
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит линтинг и сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+Volodymyr Bezpalov -QA Engineer. https://www.linkedin.com/in/volodymyr-bezpalov/

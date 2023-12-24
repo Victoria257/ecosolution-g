@@ -1,4 +1,4 @@
-import css from 'components/header/header.module.css';
+import css from 'sections/header/header.module.css';
 
 export const Logo = () => {
   return (

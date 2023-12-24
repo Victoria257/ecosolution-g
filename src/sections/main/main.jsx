@@ -1,10 +1,10 @@
 import React from 'react';
 import { Element, Link } from 'react-scroll';
 
-import css from 'components/main/main.module.css';
+import css from 'sections/main/main.module.css';
 import { Arrow } from 'components/svg/arrow';
 
-export const Main = () => {
+export const Main = ({ hideButton }) => {
   return (
     <Element name="main">
       <section className={css.container}>
@@ -18,26 +18,29 @@ export const Main = () => {
               sources, generating power generation using energy wind, sun,
               water, biomass
             </p>
-            <div className={css.moreContainer}>
-              <Link
-                to="cases"
-                smooth={true}
-                duration={1000}
-                offset={-112}
-                className={css.more}
-                tabIndex={0}
-              >
-                <span className={css.moreText}>Learn more</span>
-                <div className={css.arrow}>
-                  <Arrow
-                    width="32px"
-                    backgroundColor="rgba(151, 210, 139, 1)"
-                    transform="rotate(45deg)"
-                    color="rgba(23, 61, 51, 1)"
-                  />
-                </div>
-              </Link>
-            </div>
+            {!hideButton && (
+              <div className={css.moreContainer}>
+                <Link
+                  to="cases"
+                  smooth={true}
+                  duration={1000}
+                  offset={-112}
+                  className={css.more}
+                  tabIndex={0}
+                  aria-label='Go to "cases"'
+                >
+                  <span className={css.moreText}>Learn more</span>
+                  <div className={css.arrow}>
+                    <Arrow
+                      width="32px"
+                      backgroundColor="rgba(151, 210, 139, 1)"
+                      transform="rotate(45deg)"
+                      color="rgba(23, 61, 51, 1)"
+                    />
+                  </div>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
         <div className={css.contactsWrapper}>

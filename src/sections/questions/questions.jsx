@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Element } from 'react-scroll';
-import css from 'components/questions/questions.module.css';
+import css from 'sections/questions/questions.module.css';
 import { Add } from 'components/svg/add';
 import { Minus } from 'components/svg/minus';
 import { useState } from 'react';
@@ -27,6 +27,7 @@ export const Questions = () => {
                 <button
                   className={css.buttonIcon}
                   onClick={() => handleToggle(0)}
+                  aria-label={add[0] ? 'Open answer' : 'Close answer'}
                 >
                   {add[0] ? <Add /> : <Minus />}
                 </button>
@@ -58,6 +59,7 @@ export const Questions = () => {
                 <button
                   className={css.buttonIcon}
                   onClick={() => handleToggle(1)}
+                  aria-label={add[1] ? 'Open answer' : 'Close answer'}
                 >
                   {add[1] ? <Add /> : <Minus />}
                 </button>
@@ -75,6 +77,7 @@ export const Questions = () => {
                 <button
                   className={css.buttonIcon}
                   onClick={() => handleToggle(2)}
+                  aria-label={add[2] ? 'Open answer' : 'Close answer'}
                 >
                   {add[2] ? <Add /> : <Minus />}
                 </button>
@@ -92,6 +95,7 @@ export const Questions = () => {
                 <button
                   className={css.buttonIcon}
                   onClick={() => handleToggle(3)}
+                  aria-label={add[3] ? 'Open answer' : 'Close answer'}
                 >
                   {add[3] ? <Add /> : <Minus />}
                 </button>
@@ -109,6 +113,7 @@ export const Questions = () => {
                 <button
                   className={css.buttonIcon}
                   onClick={() => handleToggle(4)}
+                  aria-label={add[4] ? 'Open answer' : 'Close answer'}
                 >
                   {add[4] ? <Add /> : <Minus />}
                 </button>
@@ -134,6 +139,7 @@ export const Questions = () => {
               duration={1000}
               offset={-112}
               className={css.buttonWrapper}
+              aria-label='Go to "contacts"'
             >
               <button className={css.button}>
                 Contact Us

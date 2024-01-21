@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 
 import { BurgerMenu } from 'components/burgerMenu/burgerMenu';
@@ -12,32 +12,42 @@ export const Header = () => {
   const [showBackdrop, setShowBackdrop] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const handleClick = useCallback(() => {
+    setOpenMenu(prevOpenMenu => {
+      setShowBackdrop(!prevOpenMenu);
+      if (!prevOpenMenu) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'initial';
+      }
+      return !prevOpenMenu;
+    });
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 0;
       setIsScrolled(scrolled);
     };
 
+    const handleKeyPress = event => {
+      if (event.key === 'Escape' && openMenu) {
+        handleClick();
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('keydown', handleKeyPress);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('keydown', handleKeyPress);
     };
-  }, []);
+  }, [openMenu, handleClick]);
 
   const headerStyle = {
     backgroundColor: isScrolled ? 'white' : 'initial',
     transition: 'background-color 0.8s ease',
-  };
-
-  const handleClick = () => {
-    setOpenMenu(!openMenu);
-    setShowBackdrop(!openMenu);
-    if (openMenu) {
-      document.body.style.overflow = 'initial';
-    } else {
-      document.body.style.overflow = 'hidden';
-    }
   };
 
   return (

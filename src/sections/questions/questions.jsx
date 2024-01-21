@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, Element } from 'react-scroll';
 
+import questions from '../json/questions.json';
+
 import css from 'sections/questions/questions.module.css';
 
 import { Add } from 'components/svg/add';
@@ -23,110 +25,23 @@ export const Questions = () => {
         </div>
         <div className={css.listWrapper}>
           <ul className={css.list}>
-            <li className={css.set}>
-              <div className={css.questionWrapper}>
-                <button
-                  className={css.buttonIcon}
-                  onClick={() => handleToggle(0)}
-                  aria-label={add[0] ? 'Open answer' : 'Close answer'}
-                >
-                  {add[0] ? <Add /> : <Minus />}
-                </button>
-                <div className={css.text}>
-                  <p className={css.question}>
-                    How do wind turbines and solar panels work together in a
-                    renewable energy system?
-                  </p>
-                  {!add[0] && (
-                    <p className={css.answer}>
-                      Wind turbines and solar panels generate electricity
-                      through different mechanisms. Wind turbines harness the
-                      kinetic energy of the wind to turn blades, which then
-                      drive a generator. Solar panels convert sunlight into
-                      electricity through the photovoltaic effect. When
-                      integrated into a renewable energy system, these
-                      technologies complement each other by providing a
-                      continuous and reliable power supply. Wind power is often
-                      more abundant during certain times, while solar power is
-                      consistent during daylight hours, resulting in a more
-                      stable overall energy output.
-                    </p>
-                  )}
+            {questions.map((item, index) => (
+              <li className={css.set} key={index}>
+                <div className={css.questionWrapper}>
+                  <button
+                    className={css.buttonIcon}
+                    onClick={() => handleToggle(index)}
+                    aria-label={add[index] ? 'Open answer' : 'Close answer'}
+                  >
+                    {add[index] ? <Add /> : <Minus />}
+                  </button>
+                  <div className={css.text}>
+                    <p className={css.question}>{item.question}</p>
+                    {!add[index] && <p className={css.answer}>{item.answer}</p>}
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li className={css.set}>
-              <div className={css.questionWrapper}>
-                <button
-                  className={css.buttonIcon}
-                  onClick={() => handleToggle(1)}
-                  aria-label={add[1] ? 'Open answer' : 'Close answer'}
-                >
-                  {add[1] ? <Add /> : <Minus />}
-                </button>
-                <div className={css.text}>
-                  <p className={css.question}>
-                    What sets EcoSolution's renewable energy solutions apart
-                    from others on the market?
-                  </p>
-                  {!add[1] && <p className={css.answer}>answer</p>}
-                </div>
-              </div>
-            </li>
-            <li className={css.set}>
-              <div className={css.questionWrapper}>
-                <button
-                  className={css.buttonIcon}
-                  onClick={() => handleToggle(2)}
-                  aria-label={add[2] ? 'Open answer' : 'Close answer'}
-                >
-                  {add[2] ? <Add /> : <Minus />}
-                </button>
-                <div className={css.text}>
-                  <p className={css.question}>
-                    How can businesses and communities benefit from integrating
-                    renewable energy solutions from EcoSolution?
-                  </p>
-                  {!add[2] && <p className={css.answer}>answer</p>}
-                </div>
-              </div>
-            </li>
-            <li className={css.set}>
-              <div className={css.questionWrapper}>
-                <button
-                  className={css.buttonIcon}
-                  onClick={() => handleToggle(3)}
-                  aria-label={add[3] ? 'Open answer' : 'Close answer'}
-                >
-                  {add[3] ? <Add /> : <Minus />}
-                </button>
-                <div className={css.text}>
-                  <p className={css.question}>
-                    What measures does EcoSolution take to ensure the
-                    environmental sustainability of its products?
-                  </p>
-                  {!add[3] && <p className={css.answer}>answer</p>}
-                </div>
-              </div>
-            </li>
-            <li className={css.set}>
-              <div className={css.questionWrapper}>
-                <button
-                  className={css.buttonIcon}
-                  onClick={() => handleToggle(4)}
-                  aria-label={add[4] ? 'Open answer' : 'Close answer'}
-                >
-                  {add[4] ? <Add /> : <Minus />}
-                </button>
-                <div className={css.text}>
-                  <p className={css.question}>
-                    How does EcoSolution engage with local communities and
-                    support a just transition to renewable energy?
-                  </p>
-                  {!add[4] && <p className={css.answer}>answer</p>}
-                </div>
-              </div>
-            </li>
+              </li>
+            ))}
           </ul>
         </div>
         <div className={css.findQuestionAndButtonWrapper}>

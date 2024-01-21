@@ -5,13 +5,18 @@ import css from 'components/contactsForm/contactsForm.module.css';
 import { Arrow } from 'components/svg/arrow';
 
 export const ContactsForm = () => {
+  const form = JSON.parse(localStorage.getItem('form'));
   const [submit, setSubmit] = useState(false);
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
+  const [formData, setFormData] = useState(
+    form
+      ? form
+      : {
+          fullName: '',
+          email: '',
+          phone: '',
+          message: '',
+        }
+  );
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -19,6 +24,10 @@ export const ContactsForm = () => {
       ...prevData,
       [name]: value,
     }));
+    localStorage.setItem(
+      'form',
+      JSON.stringify({ ...formData, [name]: value })
+    );
   };
 
   const handleSubmit = e => {

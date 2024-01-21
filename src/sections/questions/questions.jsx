@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Element } from 'react-scroll';
 
-import questions from '../json/questions.json';
+import questions from '../../json/questions.json';
 
 import css from 'sections/questions/questions.module.css';
 

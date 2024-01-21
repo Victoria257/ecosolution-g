@@ -93,7 +93,6 @@
 .buttonWrapper:hover,
 .buttonWrapper:focus-within {
   .button {
-    background-color: rgba(23, 61, 51, 1);
     color: rgba(151, 210, 139, 1);
     border-color: rgba(23, 61, 51, 1);
   }
@@ -116,6 +115,9 @@
   margin-top: 16px;
 
   cursor: pointer;
+  &:focus {
+    outline: solid 1px black;
+  }
 }
 .arrow {
   width: 32px;

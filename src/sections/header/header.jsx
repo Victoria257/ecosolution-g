@@ -46,7 +46,7 @@ export const Header = () => {
   }, [openMenu, handleClick]);
 
   const headerStyle = {
-    backgroundColor: isScrolled ? 'white' : 'initial',
+    backgroundColor: isScrolled ? 'rgba(234, 237, 241, 1)' : 'initial',
     transition: 'background-color 0.8s ease',
   };
 

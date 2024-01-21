@@ -47,6 +47,9 @@
     color: rgba(151, 210, 139, 1);
   }
 }
+.more:focus-within {
+  outline: solid 1px black;
+}
 .moreText {
   color: rgba(23, 61, 51, 1);
   font-family: Fira Sans;

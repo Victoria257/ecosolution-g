@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import PropTypes from 'prop-types';
+
+import { Arrow } from 'components/svg/arrow';
+
 import Photo1 from 'image/slider/photo-1.png';
 import Photo2 from 'image/slider/photo-2.png';
 import Photo3 from 'image/slider/photo-3.png';
 import Photo4 from 'image/slider/photo-4.png';
 import Photo5 from 'image/slider/photo-5.png';
 
-import { Arrow } from 'components/svg/arrow';
-
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import css from './slider.module.css';
-import { useNavigate } from 'react-router-dom';
 
 function SampleNextArrow({ onClick, isHoverNext, handleBlur, handleHover }) {
   return (
@@ -164,7 +166,7 @@ export default function SimpleSlider() {
 
       <Slider {...settings} className={css.sliderContainer}>
         <div className={css.container}>
-          <img src={Photo5} alt="photo1" />
+          <img src={Photo5} alt="Big wind turbine" />
 
           <div className={css.content}>
             <div className={css.descriptionWrapper}>
@@ -206,7 +208,7 @@ export default function SimpleSlider() {
           </div>
         </div>
         <div className={css.container}>
-          <img src={Photo1} alt="Photo2" />
+          <img src={Photo1} alt="Solar panels" />
           <div className={css.content}>
             <div className={css.descriptionWrapper}>
               <h3 className={css.description}>
@@ -247,7 +249,7 @@ export default function SimpleSlider() {
           </div>
         </div>
         <div className={css.container}>
-          <img src={Photo2} alt="Photo3" />
+          <img src={Photo2} alt="Solar power plant" />
           <div className={css.content}>
             <div className={css.descriptionWrapper}>
               <h3 className={css.description}>
@@ -288,7 +290,7 @@ export default function SimpleSlider() {
           </div>
         </div>
         <div className={css.container}>
-          <img src={Photo4} alt="Photo4" />
+          <img src={Photo4} alt="Wind turbine" />
           <div className={css.content}>
             <div className={css.descriptionWrapper}>
               <h3 className={css.description}>
@@ -329,7 +331,7 @@ export default function SimpleSlider() {
           </div>
         </div>
         <div className={css.container}>
-          <img src={Photo3} alt="Photo5" />
+          <img src={Photo3} alt="Big solar power plant" />
           <div className={css.content}>
             <div className={css.descriptionWrapper}>
               <h3 className={css.description}>
@@ -373,3 +375,17 @@ export default function SimpleSlider() {
     </div>
   );
 }
+
+SampleNextArrow.propTypes = {
+  onClick: PropTypes.func,
+  isHoverNext: PropTypes.func,
+  handleBlur: PropTypes.func.isRequired,
+  handleHover: PropTypes.func.isRequired,
+};
+
+SamplePrevArrow.propTypes = {
+  onClick: PropTypes.func,
+  isHoverNext: PropTypes.func,
+  handleBlur: PropTypes.func.isRequired,
+  handleHover: PropTypes.func.isRequired,
+};

@@ -1,14 +1,15 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 
-import css from 'sections/contacts/contacts.module.css';
 import { ContactsForm } from 'components/contactsForm/contactsForm';
-import { Sms } from 'components/svg/sms';
 
+import { Sms } from 'components/svg/sms';
 import { Map } from 'components/svg/map';
 import { Call } from 'components/svg/call';
 import { FacebookForContacts } from 'components/svg/facebookForContacts';
 import { InstagramForContacts } from 'components/svg/instagramForContacts';
+
+import css from 'sections/contacts/contacts.module.css';
 
 export const Contacts = () => {
   return (

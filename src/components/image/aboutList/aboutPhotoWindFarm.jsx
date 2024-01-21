@@ -33,6 +33,7 @@ export const MainPhotoWindFarm = () => {
         src={windFarmTablet3}
         alt="wind farms fields"
         width="100%"
+        height="100%"
         className={css.mainPhotoWindFarm}
       />
     </picture>

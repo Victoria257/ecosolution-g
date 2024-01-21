@@ -34,6 +34,7 @@ export const MainPhotoSolarPanels = () => {
         src={solarPanelsTablet3}
         alt="man worker firld by solar panels"
         width="100%"
+        height="100%"
         className={css.mainPhotoSolarPanels}
       />
     </picture>

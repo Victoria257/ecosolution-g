@@ -1,9 +1,11 @@
 import React from 'react';
-import { Main } from 'sections/main/main';
-import css from './description.module.css';
 import { useNavigate } from 'react-router-dom';
+
+import { Main } from 'sections/main/main';
 import { AboutPhoto } from 'components/image/about/aboutPhoto';
 import { Arrow } from 'components/svg/arrow';
+
+import css from './description.module.css';
 
 export const Description = () => {
   const navigate = useNavigate();
@@ -12,8 +14,8 @@ export const Description = () => {
   };
   return (
     <div className={css.container}>
-      <div className={css.buttonWrapper}>
-        <button onClick={handleClick} className={css.button}>
+      <div className={css.buttonWrapper} onClick={handleClick}>
+        <button className={css.button}>
           <Arrow
             width="32px"
             transform="rotate(225deg)"

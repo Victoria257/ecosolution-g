@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Arrow = ({
   width,
@@ -42,4 +43,13 @@ export const Arrow = ({
       </svg>
     </div>
   );
+};
+
+Arrow.propTypes = {
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  transform: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  border: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  backgroundColor: PropTypes.string,
+  color: PropTypes.string,
 };

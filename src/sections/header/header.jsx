@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 
-import { useEffect } from 'react';
+import { BurgerMenu } from 'components/burgerMenu/burgerMenu';
+import css from 'sections/header/header.module.css';
 
 import { Menu } from 'components/svg/menu';
 import { Logo } from 'components/svg/logo';
-import { useState } from 'react';
-import { BurgerMenu } from 'components/burgerMenu/burgerMenu';
-
-import css from 'sections/header/header.module.css';
 
 export const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -29,7 +26,7 @@ export const Header = () => {
   }, []);
 
   const headerStyle = {
-    backgroundColor: isScrolled ? 'rgba(234, 237, 241, 1)' : 'initial',
+    backgroundColor: isScrolled ? 'white' : 'initial',
     transition: 'background-color 0.8s ease',
   };
 
@@ -70,6 +67,7 @@ export const Header = () => {
             <div className={css.backdrop} onClick={handleClick}></div>
           )}
           {openMenu && <BurgerMenu handleClick={handleClick} />}
+
           <Link
             to="contactUs"
             smooth={true}

@@ -1,5 +1,4 @@
 import { Main } from 'sections/main/main';
-
 import { Header } from 'sections/header/header';
 import { About } from 'sections/about/about';
 import { Electricity } from 'sections/electricity/electricity';

@@ -1,15 +1,15 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 
-import css from 'sections/about/about.module.css';
 import { Circle } from 'components/svg/circle';
 import { Global } from 'components/svg/global';
 import { Charge } from 'components/svg/charge';
 import { Ranking } from 'components/svg/ranking';
 import { AboutPhoto } from 'components/image/about/aboutPhoto';
-
 import { MainPhotoSolarPanels } from 'components/image/aboutList/aboutPhotoSolarPanels';
 import { MainPhotoWindFarm } from 'components/image/aboutList/aboutPhotoWindFarm';
+
+import css from 'sections/about/about.module.css';
 
 export const About = () => {
   return (

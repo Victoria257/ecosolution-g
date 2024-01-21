@@ -1,8 +1,9 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 
-import css from 'sections/cases/cases.module.css';
 import Slider from 'components/slider/slider';
+
+import css from 'sections/cases/cases.module.css';
 
 export const Cases = () => {
   return (

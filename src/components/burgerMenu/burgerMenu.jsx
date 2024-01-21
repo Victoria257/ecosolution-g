@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
-
-import css from 'components/burgerMenu/burgerMenu.module.css';
 import { Close } from 'components/svg/close';
 import { Facebook } from 'components/svg/facebook';
 import { Instagram } from 'components/svg/instagram';
 import { ArrowBurger } from 'components/svg/arrow-burger';
+import css from 'components/burgerMenu/burgerMenu.module.css';
 
 export const BurgerMenu = ({ handleClick }) => {
   return (
@@ -114,4 +114,8 @@ export const BurgerMenu = ({ handleClick }) => {
       </section>
     </div>
   );
+};
+
+BurgerMenu.propTypes = {
+  handleClick: PropTypes.func,
 };

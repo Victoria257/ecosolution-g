@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Element } from 'react-scroll';
+
 import css from 'sections/questions/questions.module.css';
+
 import { Add } from 'components/svg/add';
 import { Minus } from 'components/svg/minus';
-import { useState } from 'react';
 
 export const Questions = () => {
   const [add, setAdd] = useState([false, true, true, true, true]);

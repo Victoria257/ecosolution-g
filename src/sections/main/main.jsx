@@ -1,8 +1,10 @@
 import React from 'react';
 import { Element, Link } from 'react-scroll';
+import PropTypes from 'prop-types';
+
+import { Arrow } from 'components/svg/arrow';
 
 import css from 'sections/main/main.module.css';
-import { Arrow } from 'components/svg/arrow';
 
 export const Main = ({ hideButton }) => {
   return (
@@ -67,4 +69,8 @@ export const Main = ({ hideButton }) => {
       </section>
     </Element>
   );
+};
+
+Main.propTypes = {
+  hideButton: PropTypes.bool,
 };

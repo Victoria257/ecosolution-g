@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from 'sections/contacts/contacts.module.css';
 
 export const Map = ({ width }) => {
@@ -32,4 +33,7 @@ export const Map = ({ width }) => {
       />
     </svg>
   );
+};
+Map.propTypes = {
+  width: PropTypes.number.isRequired,
 };

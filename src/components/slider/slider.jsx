@@ -7,11 +7,11 @@ import PropTypes from 'prop-types';
 
 import { Arrow } from 'components/svg/arrow';
 
-import Photo1 from 'image/slider/photo-1.png';
-import Photo2 from 'image/slider/photo-2.png';
-import Photo3 from 'image/slider/photo-3.png';
-import Photo4 from 'image/slider/photo-4.png';
-import Photo5 from 'image/slider/photo-5.png';
+import { WindTurbineGreen } from 'components/image/slider/wind-turbine-green';
+import { SolarisStation } from 'components/image/slider/solaris-station';
+import { SolarPanels } from 'components/image/slider/solar-panels';
+import { NuclearPowerPlantCenter } from 'components/image/slider/nuclear-power-plant-center';
+import { LandscapeWithWindmills } from 'components/image/slider/landscape-with-windmills';
 
 import css from './slider.module.css';
 
@@ -166,7 +166,7 @@ export default function SimpleSlider() {
 
       <Slider {...settings} className={css.sliderContainer}>
         <div className={css.container}>
-          <img src={Photo5} alt="Big wind turbine" />
+          <WindTurbineGreen />
 
           <div className={css.content}>
             <div className={css.descriptionWrapper}>
@@ -208,7 +208,7 @@ export default function SimpleSlider() {
           </div>
         </div>
         <div className={css.container}>
-          <img src={Photo1} alt="Solar panels" />
+          <SolarPanels />
           <div className={css.content}>
             <div className={css.descriptionWrapper}>
               <h3 className={css.description}>
@@ -249,7 +249,7 @@ export default function SimpleSlider() {
           </div>
         </div>
         <div className={css.container}>
-          <img src={Photo2} alt="Solar power plant" />
+          <SolarisStation />
           <div className={css.content}>
             <div className={css.descriptionWrapper}>
               <h3 className={css.description}>
@@ -290,7 +290,7 @@ export default function SimpleSlider() {
           </div>
         </div>
         <div className={css.container}>
-          <img src={Photo4} alt="Wind turbine" />
+          <LandscapeWithWindmills />
           <div className={css.content}>
             <div className={css.descriptionWrapper}>
               <h3 className={css.description}>
@@ -331,7 +331,7 @@ export default function SimpleSlider() {
           </div>
         </div>
         <div className={css.container}>
-          <img src={Photo3} alt="Big solar power plant" />
+          <NuclearPowerPlantCenter />
           <div className={css.content}>
             <div className={css.descriptionWrapper}>
               <h3 className={css.description}>

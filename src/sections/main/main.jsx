@@ -7,9 +7,6 @@ import { Arrow } from 'components/svg/arrow';
 import css from 'sections/main/main.module.css';
 
 export const Main = ({ hideButton }) => {
-  const handleSetActive = to => {
-    console.log(to);
-  };
   return (
     <Element name="main">
       <section className={css.container}>
@@ -33,7 +30,6 @@ export const Main = ({ hideButton }) => {
                   className={css.more}
                   tabIndex={0}
                   aria-label='Go to "cases"'
-                  onSetActive={handleSetActive}
                 >
                   <span className={css.moreText}>Learn more</span>
                   <div className={css.arrow}>

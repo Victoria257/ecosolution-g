@@ -18,6 +18,7 @@ export const Footer = () => {
   const handleBlur = () => {
     setIsHover(false);
   };
+
   return (
     <section className={css.container}>
       <div className={css.footerWrapper}>

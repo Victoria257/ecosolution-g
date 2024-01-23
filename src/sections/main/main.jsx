@@ -1,7 +1,8 @@
 import React from 'react';
-import { Element, Link } from 'react-scroll';
+import { Element } from 'react-scroll';
 import PropTypes from 'prop-types';
 
+import { ScrollTo } from 'components/ScrollTo.js';
 import { Arrow } from 'components/svg/arrow';
 
 import css from 'sections/main/main.module.css';
@@ -22,7 +23,13 @@ export const Main = ({ hideButton }) => {
             </p>
             {!hideButton && (
               <div className={css.moreContainer}>
-                <Link
+                <ScrollTo
+                  target="cases"
+                  offset={112}
+                  className={css.more}
+                  aria-label='Go to "cases"'
+                >
+                  {/* <Link
                   to="cases"
                   smooth={true}
                   duration={1000}
@@ -30,7 +37,7 @@ export const Main = ({ hideButton }) => {
                   className={css.more}
                   tabIndex={0}
                   aria-label='Go to "cases"'
-                >
+                > */}
                   <span className={css.moreText}>Learn more</span>
                   <div className={css.arrow}>
                     <Arrow
@@ -40,7 +47,7 @@ export const Main = ({ hideButton }) => {
                       color="rgba(23, 61, 51, 1)"
                     />
                   </div>
-                </Link>
+                </ScrollTo>
               </div>
             )}
           </div>

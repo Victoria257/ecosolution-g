@@ -28,15 +28,6 @@ export const Main = ({ hideButton }) => {
                   className={css.more}
                   ariaLabel='Go to "cases"'
                 >
-                  {/* <Link
-                  to="cases"
-                  smooth={true}
-                  duration={1000}
-                  offset={-112}
-                  className={css.more}
-                  tabIndex={0}
-                  aria-label='Go to "cases"'
-                > */}
                   <span className={css.moreText}>Learn more</span>
                   <div className={css.arrow}>
                     <Arrow

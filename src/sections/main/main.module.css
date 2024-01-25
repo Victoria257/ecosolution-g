@@ -29,27 +29,45 @@
 .moreContainer {
   text-align: center;
   margin-top: 24px;
+  border: none;
+  background-color: inherit;
+  border-radius: 500px;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .moreContainer:focus {
+    outline: solid 2px black;
+  }
 }
 .more {
   border-radius: 500px;
   border: 1px solid #97d28b;
+}
+.moreButton {
+  border: none;
+  background-color: inherit;
   padding: 3.5px 3.5px 3.5px 16px;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 500px;
+  text-align: center;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
-.more:hover,
-.more:focus {
+.moreButton:hover,
+.moreButton:focus {
   border-color: rgba(23, 61, 51, 1);
   background-color: rgba(23, 61, 51, 1);
   .moreText {
     color: rgba(151, 210, 139, 1);
   }
 }
-.moreContainer:focus-within {
-  outline: solid 2px black;
+@media screen and (min-width: 768px) {
+  .moreButton:focus {
+    outline: solid 2px black;
+  }
 }
+
 .moreText {
   color: rgba(23, 61, 51, 1);
   font-family: Fira Sans;

@@ -31,16 +31,15 @@ export const Footer = () => {
                 className={css.logoWrapper}
                 ariaLabel='Go to "main"'
               >
-                <div className={css.logoContainer}>
+                <button className={css.logoContainer}>
                   <LogoForFooter className={css.logo} />
-                </div>
+                </button>
               </ScrollTo>
               <div
                 onFocus={handleHover}
                 onMouseOver={handleHover}
                 onMouseOut={handleBlur}
                 onBlur={handleBlur}
-                tabIndex={0}
               >
                 <ScrollTo
                   target="main"
@@ -48,21 +47,24 @@ export const Footer = () => {
                   className={css.arrowWrapper}
                   ariaLabel='Go to "main"'
                 >
-                  <Arrow
-                    tabIndex={0}
-                    width="32px"
-                    height="32px"
-                    transform="rotate(-45deg)"
-                    transition="backgroundColor 0.8s, color 0.8s"
-                    backgroundColor={
-                      isHover ? 'rgba(23, 61, 51, 1)' : 'rgba(151, 210, 139, 1)'
-                    }
-                    color={
-                      !isHover
-                        ? 'rgba(23, 61, 51, 1)'
-                        : 'rgba(151, 210, 139, 1)'
-                    }
-                  />
+                  <button className={css.arrowButton}>
+                    <Arrow
+                      width="32px"
+                      height="32px"
+                      transform="rotate(-45deg)"
+                      transition="backgroundColor 0.8s, color 0.8s"
+                      backgroundColor={
+                        isHover
+                          ? 'rgba(23, 61, 51, 1)'
+                          : 'rgba(151, 210, 139, 1)'
+                      }
+                      color={
+                        !isHover
+                          ? 'rgba(23, 61, 51, 1)'
+                          : 'rgba(151, 210, 139, 1)'
+                      }
+                    />
+                  </button>
                 </ScrollTo>
               </div>
             </div>
@@ -71,8 +73,8 @@ export const Footer = () => {
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={css.socialFB}
                 aria-label="Open our Facebook page"
+                className={css.socialFB}
               >
                 <FacebookForFooter />
               </a>

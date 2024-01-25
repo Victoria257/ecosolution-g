@@ -20,49 +20,56 @@ function SampleNextArrow({ onClick, isHoverNext, handleBlur, handleHover }) {
     <div
       className={css.nextArrow}
       onClick={onClick}
-      tabIndex={0}
       onFocus={() => handleHover('next')}
       onMouseOver={() => handleHover('next')}
       onMouseOut={() => handleBlur('next')}
       onBlur={() => handleBlur('next')}
     >
-      <Arrow
-        width={66}
-        height={66}
-        transform="rotate(-135deg)"
-        transition="border 0.8s, color 0.8s"
-        aria-label="Next photo"
-        border={
-          !isHoverNext
-            ? ' solid 1px  rgba(23, 61, 51, 1)'
-            : 'solid 3px rgba(151, 210, 139, 1)'
-        }
-        color={!isHoverNext ? 'rgba(23, 61, 51, 1)' : 'rgba(151, 210, 139, 1)'}
-      />
+      <button className={css.nextArrowButton}>
+        <Arrow
+          width={66}
+          height={66}
+          transform="rotate(-135deg)"
+          transition="border 0.8s, color 0.8s"
+          aria-label="Next photo"
+          border={
+            !isHoverNext
+              ? ' solid 1px  rgba(23, 61, 51, 1)'
+              : 'solid 3px rgba(151, 210, 139, 1)'
+          }
+          color={
+            !isHoverNext ? 'rgba(23, 61, 51, 1)' : 'rgba(151, 210, 139, 1)'
+          }
+        />
+      </button>
     </div>
   );
 }
 
 function SamplePrevArrow({ onClick, isHoverPrev, handleBlur, handleHover }) {
   return (
-    <div className={css.prevArrow} onClick={onClick} tabIndex={0}>
-      <Arrow
-        width={66}
-        height={66}
-        transform="rotate(-135deg)"
-        transition="border 0.8s, color 0.8s"
-        aria-label="Previous photo"
-        border={
-          !isHoverPrev
-            ? ' solid 1px  rgba(23, 61, 51, 1)'
-            : 'solid 1px rgba(151, 210, 139, 1)'
-        }
-        color={!isHoverPrev ? 'rgba(23, 61, 51, 1)' : 'rgba(151, 210, 139, 1)'}
-        onFocus={() => handleHover('prev')}
-        onMouseOver={() => handleHover('prev')}
-        onMouseOut={() => handleBlur('prev')}
-        onBlur={() => handleBlur('prev')}
-      />
+    <div className={css.prevArrow} onClick={onClick}>
+      <button className={css.prevArrowButton}>
+        <Arrow
+          width={66}
+          height={66}
+          transform="rotate(-135deg)"
+          transition="border 0.8s, color 0.8s"
+          aria-label="Previous photo"
+          border={
+            !isHoverPrev
+              ? ' solid 1px  rgba(23, 61, 51, 1)'
+              : 'solid 1px rgba(151, 210, 139, 1)'
+          }
+          color={
+            !isHoverPrev ? 'rgba(23, 61, 51, 1)' : 'rgba(151, 210, 139, 1)'
+          }
+          onFocus={() => handleHover('prev')}
+          onMouseOver={() => handleHover('prev')}
+          onMouseOut={() => handleBlur('prev')}
+          onBlur={() => handleBlur('prev')}
+        />
+      </button>
     </div>
   );
 }

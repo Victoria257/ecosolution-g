@@ -24,6 +24,12 @@ export const Header = () => {
     });
   }, []);
 
+  const handleFocus = event => {
+    if (event.key === 'Enter' || event.keyCode === 13) {
+      handleClick();
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 0;
@@ -53,41 +59,42 @@ export const Header = () => {
   return (
     <section className={css.container} style={headerStyle}>
       <div className={css.wrapper}>
-        <div tabIndex="0">
-          <ScrollTo
-            target="main"
-            offset={112}
-            className={css.logoWrapper}
-            ariaLabel='Go to "main"'
-          >
+        <ScrollTo
+          target="main"
+          offset={112}
+          className={css.logoWrapper}
+          ariaLabel='Go to "main"'
+        >
+          <button className={css.logoButton}>
             <Logo />
-          </ScrollTo>
-        </div>
+          </button>
+        </ScrollTo>
         <div className={css.rightWrapper}>
-          <div
+          <button
             className={css.menuWrapper}
             onClick={handleClick}
-            tabIndex={0}
+            onFocus={handleFocus}
             aria-label="Open menu"
           >
             <Menu className={css.menu} />
-          </div>
+          </button>
           {showBackdrop && (
             <div className={css.backdrop} onClick={handleClick}></div>
           )}
           {openMenu && <BurgerMenu handleClick={handleClick} />}
-
-          <ScrollTo
-            target="contactUs"
-            offset={112}
-            className={css.buttonWrapper}
-            ariaLabel='Go to "contacts"'
-          >
-            <button className={css.button}>
-              <span className={css.buttonText}>Get in touch</span>
-              <span className={css.dot}></span>
-            </button>
-          </ScrollTo>
+          <div>
+            <ScrollTo
+              target="contactUs"
+              offset={112}
+              className={css.buttonWrapper}
+              ariaLabel='Go to "contacts"'
+            >
+              <button className={css.button}>
+                <span className={css.buttonText}>Get in touch</span>
+                <span className={css.dot}></span>
+              </button>
+            </ScrollTo>
+          </div>
         </div>
       </div>
     </section>

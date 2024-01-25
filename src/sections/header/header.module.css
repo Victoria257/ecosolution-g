@@ -36,11 +36,16 @@
     padding-right: 100px;
   }
 }
+
 .logoWrapper:hover,
 .logoWrapper:focus {
   .logo {
     fill: rgba(151, 210, 139, 1);
   }
+}
+.logoButton {
+  border: none;
+  background-color: inherit;
 }
 .logo {
   fill: rgba(23, 61, 51, 1);
@@ -56,6 +61,7 @@
 }
 .menuWrapper {
   border-radius: 50px;
+  border: none;
   background-color: rgba(220, 239, 216, 1);
   padding: 12px;
   cursor: pointer;

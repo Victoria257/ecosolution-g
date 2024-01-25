@@ -21,22 +21,24 @@ export const Main = ({ hideButton }) => {
               water, biomass
             </p>
             {!hideButton && (
-              <div className={css.moreContainer} tabIndex={0}>
+              <div className={css.moreContainer}>
                 <ScrollTo
                   target="cases"
                   offset={112}
                   className={css.more}
                   ariaLabel='Go to "cases"'
                 >
-                  <span className={css.moreText}>Learn more</span>
-                  <div className={css.arrow}>
-                    <Arrow
-                      width="32px"
-                      backgroundColor="rgba(151, 210, 139, 1)"
-                      transform="rotate(45deg)"
-                      color="rgba(23, 61, 51, 1)"
-                    />
-                  </div>
+                  <button className={css.moreButton}>
+                    <span className={css.moreText}>Learn more</span>
+                    <div className={css.arrow}>
+                      <Arrow
+                        width="32px"
+                        backgroundColor="rgba(151, 210, 139, 1)"
+                        transform="rotate(45deg)"
+                        color="rgba(23, 61, 51, 1)"
+                      />
+                    </div>
+                  </button>
                 </ScrollTo>
               </div>
             )}

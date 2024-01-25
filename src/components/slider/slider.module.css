@@ -8,6 +8,11 @@
   cursor: pointer;
 }
 
+.nextArrowButton {
+  border: none;
+  background-color: inherit;
+}
+
 .prevArrow {
   position: absolute;
   display: inline-block;
@@ -15,6 +20,10 @@
   transform: translateX(-50%);
   top: -93px;
   cursor: pointer;
+}
+.prevArrowButton {
+  border: none;
+  background-color: inherit;
 }
 .arrowWrapper {
   display: flex;

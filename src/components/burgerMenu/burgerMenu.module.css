@@ -112,6 +112,11 @@
   gap: 8px;
 }
 
+.set:focus {
+  .setText {
+    color: rgba(255, 255, 255, 1);
+  }
+}
 .set p {
   color: rgba(255, 255, 255, 1);
   font-family: Fira Sans;
@@ -121,13 +126,12 @@
   line-height: normal;
   letter-spacing: -0.96px;
 
-  @media screen and (min-width: 768px) {
-    color: rgba(255, 255, 255, 0.25);
-  }
-
-  &:focus,
   &:hover {
     color: rgba(255, 255, 255, 1);
+  }
+
+  @media screen and (min-width: 768px) {
+    color: rgba(255, 255, 255, 0.25);
   }
 }
 

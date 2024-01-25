@@ -1,5 +1,4 @@
 import React from 'react';
-import { Element } from 'react-scroll';
 
 import { ContactsForm } from 'components/contactsForm/contactsForm';
 
@@ -13,7 +12,7 @@ import css from 'sections/contacts/contacts.module.css';
 
 export const Contacts = () => {
   return (
-    <Element name="contactUs">
+    <div name="contactUs" id="contactUs">
       <section className={css.container}>
         <div className={css.titleWrapper}>
           <h2 className={css.title}>Contact us</h2>
@@ -108,6 +107,6 @@ export const Contacts = () => {
           </div>
         </div>
       </section>
-    </Element>
+    </div>
   );
 };

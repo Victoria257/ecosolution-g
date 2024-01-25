@@ -1,5 +1,4 @@
 import React from 'react';
-import { Element } from 'react-scroll';
 import PropTypes from 'prop-types';
 
 import { ScrollTo } from 'components/ScrollTo.js';
@@ -9,7 +8,7 @@ import css from 'sections/main/main.module.css';
 
 export const Main = ({ hideButton }) => {
   return (
-    <Element name="main">
+    <div name="main" id="main">
       <section className={css.container}>
         <div className={css.mainWrapper}>
           <div className={css.titleWrapper}>
@@ -22,12 +21,12 @@ export const Main = ({ hideButton }) => {
               water, biomass
             </p>
             {!hideButton && (
-              <div className={css.moreContainer}>
+              <div className={css.moreContainer} tabIndex={0}>
                 <ScrollTo
                   target="cases"
                   offset={112}
                   className={css.more}
-                  aria-label='Go to "cases"'
+                  ariaLabel='Go to "cases"'
                 >
                   {/* <Link
                   to="cases"
@@ -74,7 +73,7 @@ export const Main = ({ hideButton }) => {
           </div>
         </div>
       </section>
-    </Element>
+    </div>
   );
 };
 

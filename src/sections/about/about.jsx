@@ -1,5 +1,4 @@
 import React from 'react';
-import { Element } from 'react-scroll';
 
 import { Circle } from 'components/svg/circle';
 import { Global } from 'components/svg/global';
@@ -13,7 +12,7 @@ import css from 'sections/about/about.module.css';
 
 export const About = () => {
   return (
-    <Element name="about">
+    <div name="about" id="about">
       <section className={css.container}>
         <div className={css.thumb}>
           <AboutPhoto className={css.photo} />
@@ -83,6 +82,6 @@ export const About = () => {
           </li>
         </ul>
       </section>
-    </Element>
+    </div>
   );
 };

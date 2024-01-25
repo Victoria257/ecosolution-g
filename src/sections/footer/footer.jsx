@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-scroll';
 
+import { ScrollTo } from 'components/ScrollTo';
 import css from 'sections/footer/footer.module.css';
 
 import { Arrow } from 'components/svg/arrow';
@@ -24,46 +24,47 @@ export const Footer = () => {
       <div className={css.footerWrapper}>
         <div className={css.footer}>
           <div className={css.wrapperLogoAndSocial}>
-            <div className={css.logoWrapper}>
-              <Link
-                to="main"
-                smooth={true}
-                duration={1000}
-                offset={-112}
+            <div className={css.logoWrapper} tabIndex={0}>
+              <ScrollTo
+                target="main"
+                offset={112}
                 className={css.logoWrapper}
-                aria-label='Go to "main"'
+                ariaLabel='Go to "main"'
               >
-                <div className={css.logoContainer} tabIndex={0}>
+                <div className={css.logoContainer}>
                   <LogoForFooter className={css.logo} />
                 </div>
-              </Link>
-              <Link
-                to="main"
-                smooth={true}
-                duration={1000}
-                offset={-112}
-                className={css.arrowWrapper}
+              </ScrollTo>
+              <div
                 onFocus={handleHover}
                 onMouseOver={handleHover}
                 onMouseOut={handleBlur}
                 onBlur={handleBlur}
                 tabIndex={0}
-                aria-label='Go to "main"'
               >
-                <Arrow
-                  tabIndex={0}
-                  width="32px"
-                  height="32px"
-                  transform="rotate(-45deg)"
-                  transition="backgroundColor 0.8s, color 0.8s"
-                  backgroundColor={
-                    isHover ? 'rgba(23, 61, 51, 1)' : 'rgba(151, 210, 139, 1)'
-                  }
-                  color={
-                    !isHover ? 'rgba(23, 61, 51, 1)' : 'rgba(151, 210, 139, 1)'
-                  }
-                />
-              </Link>
+                <ScrollTo
+                  target="main"
+                  offset={112}
+                  className={css.arrowWrapper}
+                  ariaLabel='Go to "main"'
+                >
+                  <Arrow
+                    tabIndex={0}
+                    width="32px"
+                    height="32px"
+                    transform="rotate(-45deg)"
+                    transition="backgroundColor 0.8s, color 0.8s"
+                    backgroundColor={
+                      isHover ? 'rgba(23, 61, 51, 1)' : 'rgba(151, 210, 139, 1)'
+                    }
+                    color={
+                      !isHover
+                        ? 'rgba(23, 61, 51, 1)'
+                        : 'rgba(151, 210, 139, 1)'
+                    }
+                  />
+                </ScrollTo>
+              </div>
             </div>
             <div className={css.social}>
               <a

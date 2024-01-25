@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link, Element } from 'react-scroll';
 
+import { ScrollTo } from 'components/ScrollTo';
 import questions from '../../json/questions.json';
 
 import css from 'sections/questions/questions.module.css';
@@ -18,7 +18,7 @@ export const Questions = () => {
   };
 
   return (
-    <Element name="questions">
+    <div name="questions" id="questions">
       <section className={css.container}>
         <div className={css.titleWrapper}>
           <h2 className={css.title}>Frequently Asked Questions</h2>
@@ -49,22 +49,20 @@ export const Questions = () => {
             <p className={css.findQuestion}>
               Didn't find the answer to your question?{' '}
             </p>
-            <Link
-              to="contactUs"
-              smooth={true}
-              duration={1000}
-              offset={-112}
+            <ScrollTo
+              target="contactUs"
+              offset={112}
               className={css.buttonWrapper}
-              aria-label='Go to "contacts"'
+              ariaLabel='Go to "contacts"'
             >
               <button className={css.button}>
                 Contact Us
                 <span className={css.dot}></span>
               </button>
-            </Link>
+            </ScrollTo>
           </div>
         </div>
       </section>
-    </Element>
+    </div>
   );
 };

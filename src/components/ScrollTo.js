@@ -1,6 +1,12 @@
 import React from 'react';
 
-export const ScrollTo = ({ target, offset = 0, children }) => {
+export const ScrollTo = ({
+  target,
+  offset = 0,
+  className,
+  ariaLabel,
+  children,
+}) => {
   const handleClick = () => {
     const targetElement = document.getElementById(target);
 
@@ -14,5 +20,9 @@ export const ScrollTo = ({ target, offset = 0, children }) => {
     }
   };
 
-  return <div onClick={handleClick}>{children}</div>;
+  return (
+    <div onClick={handleClick} aria-label={ariaLabel} className={className}>
+      {children}
+    </div>
+  );
 };

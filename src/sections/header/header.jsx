@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Link } from 'react-scroll';
 
+import { ScrollTo } from 'components/ScrollTo';
 import { BurgerMenu } from 'components/burgerMenu/burgerMenu';
 import css from 'sections/header/header.module.css';
 
@@ -53,17 +53,16 @@ export const Header = () => {
   return (
     <section className={css.container} style={headerStyle}>
       <div className={css.wrapper}>
-        <Link
-          to="main"
-          smooth={true}
-          duration={1000}
-          offset={-112}
-          className={css.logoWrapper}
-          tabIndex={0}
-          aria-label='Go to "main"'
-        >
-          <Logo />
-        </Link>
+        <div tabIndex="0">
+          <ScrollTo
+            target="main"
+            offset={112}
+            className={css.logoWrapper}
+            ariaLabel='Go to "main"'
+          >
+            <Logo />
+          </ScrollTo>
+        </div>
         <div className={css.rightWrapper}>
           <div
             className={css.menuWrapper}
@@ -78,19 +77,17 @@ export const Header = () => {
           )}
           {openMenu && <BurgerMenu handleClick={handleClick} />}
 
-          <Link
-            to="contactUs"
-            smooth={true}
-            duration={1000}
-            offset={-112}
+          <ScrollTo
+            target="contactUs"
+            offset={112}
             className={css.buttonWrapper}
-            aria-label='Go to "contacts"'
+            ariaLabel='Go to "contacts"'
           >
             <button className={css.button}>
               <span className={css.buttonText}>Get in touch</span>
               <span className={css.dot}></span>
             </button>
-          </Link>
+          </ScrollTo>
         </div>
       </div>
     </section>

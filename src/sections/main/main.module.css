@@ -29,7 +29,6 @@
 .moreContainer {
   text-align: center;
   margin-top: 24px;
-  cursor: pointer;
 }
 .more {
   border-radius: 500px;
@@ -38,6 +37,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .more:hover,
 .more:focus {
@@ -47,8 +47,8 @@
     color: rgba(151, 210, 139, 1);
   }
 }
-.more:focus-within {
-  outline: solid 1px black;
+.moreContainer:focus-within {
+  outline: solid 2px black;
 }
 .moreText {
   color: rgba(23, 61, 51, 1);

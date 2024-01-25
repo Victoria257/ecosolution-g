@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-scroll';
+import { ScrollTo } from 'components/ScrollTo';
 import { Close } from 'components/svg/close';
 import { Facebook } from 'components/svg/facebook';
 import { Instagram } from 'components/svg/instagram';
@@ -19,75 +19,85 @@ export const BurgerMenu = ({ handleClick }) => {
         </div>
         <div className={css.wrapper}>
           <ul className={css.list}>
-            <li className={css.set} tabIndex="0" role="menuitem">
-              <Link
-                to="main"
-                smooth={true}
-                duration={1000}
-                offset={-112}
+            <li
+              className={css.set}
+              tabIndex="0"
+              role="menuitem"
+              onClick={handleClick}
+            >
+              <ScrollTo
+                target="main"
+                offset={112}
                 className={css.link}
-                onClick={handleClick}
-                aria-label='Go to "main"'
+                ariaLabel='Go to "main"'
               >
-                <p>Main</p>
+                <p className={css.setText}>Main</p>
                 <ArrowBurger className={css.arrowBurger} />
-              </Link>
+              </ScrollTo>
             </li>
-            <li className={css.set} tabIndex="0" role="menuitem">
-              <Link
-                to="about"
-                smooth={true}
-                duration={1000}
-                offset={-112}
+            <li
+              className={css.set}
+              tabIndex="0"
+              role="menuitem"
+              onClick={handleClick}
+            >
+              <ScrollTo
+                target="about"
+                offset={112}
                 className={css.link}
-                onClick={handleClick}
-                aria-label='Go to "about"'
+                ariaLabel='Go to "about"'
               >
-                <p>About</p>
+                <p className={css.setText}>About</p>
                 <ArrowBurger color="rgba(255, 255, 255, 1)" />
-              </Link>
+              </ScrollTo>
             </li>
-            <li className={css.set} tabIndex="0" role="menuitem">
-              <Link
-                to="cases"
-                smooth={true}
-                duration={1000}
-                offset={-112}
+            <li
+              className={css.set}
+              tabIndex="0"
+              role="menuitem"
+              onClick={handleClick}
+            >
+              <ScrollTo
+                target="cases"
+                offset={112}
                 className={css.link}
-                onClick={handleClick}
-                aria-label='Go to "cases"'
+                ariaLabel='Go to "cases"'
               >
-                <p>Cases</p>
+                <p className={css.setText}>Cases</p>
                 <ArrowBurger color="rgba(255, 255, 255, 1)" />
-              </Link>
+              </ScrollTo>
             </li>
-            <li className={css.set} tabIndex="0" role="menuitem">
-              <Link
-                to="questions"
-                smooth={true}
-                duration={1000}
-                offset={-112}
+            <li
+              className={css.set}
+              tabIndex="0"
+              role="menuitem"
+              onClick={handleClick}
+            >
+              <ScrollTo
+                target="questions"
+                offset={112}
                 className={css.link}
-                onClick={handleClick}
-                aria-label='Go to "questions"'
+                ariaLabel='Go to "questions"'
               >
-                <p>FAQ</p>
+                <p className={css.setText}>FAQ</p>
                 <ArrowBurger color="rgba(255, 255, 255, 1)" />
-              </Link>
+              </ScrollTo>
             </li>
-            <li className={css.set} tabIndex="0" role="menuitem">
-              <Link
-                to="contactUs"
-                smooth={true}
-                duration={1000}
-                offset={-112}
+            <li
+              className={css.set}
+              tabIndex="0"
+              role="menuitem"
+              onClick={handleClick}
+            >
+              <ScrollTo
+                target="contactUs"
+                offset={112}
                 className={css.link}
-                onClick={handleClick}
-                aria-label='Go to "contact"'
+                ariaLabel='Go to "contact"'
               >
-                <p>Contact Us</p>
+                <p className={css.setText}>Contact Us</p>
                 <ArrowBurger color="rgba(255, 255, 255, 1)" />
-              </Link>
+              </ScrollTo>
             </li>
           </ul>
           <div className={css.social}>

@@ -39,12 +39,9 @@
     outline: solid 2px black;
   }
 }
-.more {
-  border-radius: 500px;
-  border: 1px solid #97d28b;
-}
+
 .moreButton {
-  border: none;
+  border: 1px solid #97d28b;
   background-color: inherit;
   padding: 3.5px 3.5px 3.5px 16px;
   display: inline-flex;

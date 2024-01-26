@@ -24,7 +24,7 @@ export const Footer = () => {
       <div className={css.footerWrapper}>
         <div className={css.footer}>
           <div className={css.wrapperLogoAndSocial}>
-            <div className={css.logoWrapper} tabIndex={0}>
+            <div className={css.logoWrapper}>
               <ScrollTo
                 target="main"
                 offset={112}

@@ -13,7 +13,9 @@
 .footer {
   padding-bottom: 24px;
 }
-
+.wrapperLogoAndSocial {
+  text-align: center;
+}
 .logoWrapper {
   display: flex;
   align-items: center;

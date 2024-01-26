@@ -22,12 +22,7 @@ export const Main = ({ hideButton }) => {
             </p>
             {!hideButton && (
               <div className={css.moreContainer}>
-                <ScrollTo
-                  target="cases"
-                  offset={112}
-                  className={css.more}
-                  ariaLabel='Go to "cases"'
-                >
+                <ScrollTo target="cases" offset={112} ariaLabel='Go to "cases"'>
                   <button className={css.moreButton}>
                     <span className={css.moreText}>Learn more</span>
                     <div className={css.arrow}>

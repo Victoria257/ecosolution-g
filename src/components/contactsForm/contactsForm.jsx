@@ -44,23 +44,22 @@ export const ContactsForm = () => {
 
     if (!isFullNameValid) {
       setFormData(prevFormData => {
-        console.log('Invalid Fullname');
         return { ...prevFormData, fullName: '' };
       });
     }
     if (!phoneValid) {
       setFormData(prevFormData => {
-        console.log('Invalid Phone');
         return { ...prevFormData, phone: '' };
       });
     }
     if (!emailValid) {
       setFormData(prevFormData => {
-        console.log('Invalid Email');
         return { ...prevFormData, email: '' };
       });
     }
-
+    if (!isFullNameValid || !phoneValid || !emailValid) {
+      showToast('error', 'Invalid data');
+    }
     if (emailValid && phoneValid && isFullNameValid) {
       console.log('Form data submitted:', formData);
       setFormData({
@@ -70,13 +69,13 @@ export const ContactsForm = () => {
         message: '',
       });
       setSubmit(false);
-      showToast();
+      showToast('success', 'Contacts sent successfully!');
     }
   };
 
-  const showToast = () => {
-    toast.success('Сontacts sent successfully!', {
-      position: 'bottom-right',
+  const showToast = (status, message) => {
+    toast[status](message, {
+      position: 'bottom-center',
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,

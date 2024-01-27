@@ -46,9 +46,9 @@ export const Questions = () => {
         </div>
         <div className={css.findQuestionAndButtonWrapper}>
           <div className={css.findQuestionAndButton}>
-            <p className={css.findQuestion}>
+            <h2 className={css.findQuestion}>
               Didn't find the answer to your question?{' '}
-            </p>
+            </h2>
             <ScrollTo
               target="contactUs"
               offset={112}

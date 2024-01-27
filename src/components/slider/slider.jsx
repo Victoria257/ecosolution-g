@@ -25,7 +25,7 @@ function SampleNextArrow({ onClick, isHoverNext, handleBlur, handleHover }) {
       onMouseOut={() => handleBlur('next')}
       onBlur={() => handleBlur('next')}
     >
-      <button className={css.nextArrowButton}>
+      <button aria-label="Next" className={css.nextArrowButton}>
         <Arrow
           width={66}
           height={66}
@@ -49,7 +49,7 @@ function SampleNextArrow({ onClick, isHoverNext, handleBlur, handleHover }) {
 function SamplePrevArrow({ onClick, isHoverPrev, handleBlur, handleHover }) {
   return (
     <div className={css.prevArrow} onClick={onClick}>
-      <button className={css.prevArrowButton}>
+      <button aria-label="Previous" className={css.prevArrowButton}>
         <Arrow
           width={66}
           height={66}

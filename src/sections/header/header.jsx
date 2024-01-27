@@ -65,7 +65,7 @@ export const Header = () => {
           className={css.logoWrapper}
           ariaLabel='Go to "main"'
         >
-          <button className={css.logoButton}>
+          <button aria-label="go to main" className={css.logoButton}>
             <Logo />
           </button>
         </ScrollTo>

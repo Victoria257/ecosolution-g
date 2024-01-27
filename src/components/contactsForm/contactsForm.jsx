@@ -100,6 +100,7 @@ export const ContactsForm = () => {
             <h2>* Full name:</h2>
             <input
               name="fullName"
+              aria-label="fullName"
               placeholder="John Rosie"
               value={formData.fullName}
               onChange={handleChange}
@@ -119,6 +120,7 @@ export const ContactsForm = () => {
 
             <input
               name="email"
+              aria-label="email"
               placeholder="johnrosie@gmail.com"
               value={formData.email}
               onChange={handleChange}
@@ -137,6 +139,7 @@ export const ContactsForm = () => {
             <h2>* Phone:</h2>
             <input
               name="phone"
+              aria-label="phone"
               placeholder="380961234567"
               value={formData.phone}
               onChange={handleChange}
@@ -149,6 +152,7 @@ export const ContactsForm = () => {
             <h2>Message:</h2>
             <textarea
               name="message"
+              aria-label="message"
               placeholder="Your message"
               value={formData.message}
               onChange={handleChange}

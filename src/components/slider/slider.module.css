@@ -50,11 +50,6 @@
   background-color: rgba(234, 237, 241, 1);
 }
 
-/* .sliderContainer > div > div > div {
-  outline: solid red 1px;
-  margin: 0 15px;
-} */
-
 .container img {
   width: 100%;
   display: block;
@@ -128,6 +123,8 @@
   }
   .sliderContainer {
     margin-top: 36px;
+    margin-left: -12px;
+    margin-right: -12px;
   }
   .container {
     border-right: solid 12px rgba(243, 245, 250, 1);
@@ -192,6 +189,8 @@
   }
   .sliderContainer {
     margin-top: 120px;
+    margin-left: -24px;
+    margin-right: -24px;
   }
   .container {
     border-right: solid 24px rgba(243, 245, 250, 1);

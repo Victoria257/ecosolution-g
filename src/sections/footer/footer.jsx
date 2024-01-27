@@ -31,7 +31,7 @@ export const Footer = () => {
                 className={css.logoWrapper}
                 ariaLabel='Go to "main"'
               >
-                <button className={css.logoContainer}>
+                <button aria-label="go to main" className={css.logoContainer}>
                   <LogoForFooter className={css.logo} />
                 </button>
               </ScrollTo>
@@ -47,7 +47,7 @@ export const Footer = () => {
                   className={css.arrowWrapper}
                   ariaLabel='Go to "main"'
                 >
-                  <button className={css.arrowButton}>
+                  <button aria-label="go to main" className={css.arrowButton}>
                     <Arrow
                       width="32px"
                       height="32px"

@@ -19,6 +19,12 @@ export const Footer = () => {
     setIsHover(false);
   };
 
+  const handleButtonClick = () => {
+    const targetSection = document.getElementById('header');
+    const firstFocusableElement = targetSection.querySelector('a, button');
+    firstFocusableElement && firstFocusableElement.focus();
+  };
+
   return (
     <section className={css.container}>
       <div className={css.footerWrapper}>
@@ -31,7 +37,11 @@ export const Footer = () => {
                 className={css.logoWrapper}
                 ariaLabel='Go to "main"'
               >
-                <button aria-label="go to main" className={css.logoContainer}>
+                <button
+                  aria-label="go to main"
+                  className={css.logoContainer}
+                  onClick={handleButtonClick}
+                >
                   <LogoForFooter className={css.logo} />
                 </button>
               </ScrollTo>
@@ -47,7 +57,11 @@ export const Footer = () => {
                   className={css.arrowWrapper}
                   ariaLabel='Go to "main"'
                 >
-                  <button aria-label="go to main" className={css.arrowButton}>
+                  <button
+                    aria-label="go to main"
+                    className={css.arrowButton}
+                    onClick={handleButtonClick}
+                  >
                     <Arrow
                       width="32px"
                       height="32px"

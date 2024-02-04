@@ -16,7 +16,11 @@ export const Questions = () => {
       return prevStates.map((_, i) => (i === index ? !prevStates[i] : true));
     });
   };
-
+  const handleButtonClick = () => {
+    const targetSection = document.getElementById('contactUs');
+    const firstFocusableElement = targetSection.querySelector('a, button');
+    firstFocusableElement && firstFocusableElement.focus();
+  };
   return (
     <div name="questions" id="questions">
       <section className={css.container}>
@@ -55,7 +59,7 @@ export const Questions = () => {
               className={css.buttonWrapper}
               ariaLabel='Go to "contacts"'
             >
-              <button className={css.button}>
+              <button className={css.button} onClick={handleButtonClick}>
                 Contact Us
                 <span className={css.dot}></span>
               </button>

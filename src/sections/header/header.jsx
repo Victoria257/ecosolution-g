@@ -24,6 +24,12 @@ export const Header = () => {
     });
   }, []);
 
+  const handleButtonClick = () => {
+    const targetSection = document.getElementById('contactUs');
+    const firstFocusableElement = targetSection.querySelector('a, button');
+    firstFocusableElement && firstFocusableElement.focus();
+  };
+
   const handleFocus = event => {
     if (event.key === 'Enter' || event.keyCode === 13) {
       handleClick();
@@ -57,7 +63,7 @@ export const Header = () => {
   };
 
   return (
-    <section className={css.container} style={headerStyle}>
+    <section className={css.container} style={headerStyle} id="header">
       <div className={css.wrapper}>
         <ScrollTo
           target="main"
@@ -89,7 +95,7 @@ export const Header = () => {
               className={css.buttonWrapper}
               ariaLabel='Go to "contacts"'
             >
-              <button className={css.button}>
+              <button className={css.button} onClick={handleButtonClick}>
                 <span className={css.buttonText}>Get in touch</span>
                 <span className={css.dot}></span>
               </button>

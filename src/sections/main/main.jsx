@@ -7,6 +7,11 @@ import { Arrow } from 'components/svg/arrow';
 import css from 'sections/main/main.module.css';
 
 export const Main = ({ hideButton }) => {
+  const handleButtonClick = () => {
+    const targetSection = document.getElementById('cases');
+    const firstFocusableElement = targetSection.querySelector('a, button');
+    firstFocusableElement && firstFocusableElement.focus();
+  };
   return (
     <div name="main" id="main">
       <section className={css.container}>
@@ -23,7 +28,10 @@ export const Main = ({ hideButton }) => {
             {!hideButton && (
               <div className={css.moreContainer}>
                 <ScrollTo target="cases" offset={112} ariaLabel='Go to "cases"'>
-                  <button className={css.moreButton}>
+                  <button
+                    className={css.moreButton}
+                    onClick={handleButtonClick}
+                  >
                     <span className={css.moreText}>Learn more</span>
                     <div className={css.arrow}>
                       <Arrow

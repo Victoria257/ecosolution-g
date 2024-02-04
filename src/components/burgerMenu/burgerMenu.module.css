@@ -110,14 +110,8 @@
 .link {
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
-.set:focus {
-  .setText {
-    color: rgba(255, 255, 255, 1);
-  }
-}
 .set p {
   color: rgba(255, 255, 255, 1);
   font-family: Fira Sans;
@@ -126,6 +120,7 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.96px;
+  margin-right: 8px;
 
   &:hover {
     color: rgba(255, 255, 255, 1);
@@ -143,6 +138,18 @@
   stroke: rgba(255, 255, 255, 1);
   @media screen and (min-width: 768px) {
     stroke: rgba(255, 255, 255, 0.25);
+  }
+}
+.buttons {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  background-color: inherit;
+  padding: 0;
+  &:focus {
+    .setText {
+      color: rgba(255, 255, 255, 1);
+    }
   }
 }
 .social {
